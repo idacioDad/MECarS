@@ -17,4 +17,9 @@ class Carro extends Model
     function modelo() {
         return $this->belongsTo('App\Modelo', 'id_modelo','modelo_id');
     }
+
+    function parque() {
+        return $this->belongsTo('App\Parque', 'id_parque','parque_id');
+    }
+
 }

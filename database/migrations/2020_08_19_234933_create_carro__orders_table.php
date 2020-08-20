@@ -15,9 +15,12 @@ class CreateCarroOrdersTable extends Migration
     {
         Schema::create('carro__orders', function (Blueprint $table) {
             $table->bigIncrements('id');
-            //$table->orders_id();
-            //$table->id_carro();
-            //$table->id_documento();
+            $table->unsignedBigInteger('id_order');
+            $table->foreign('id_order')->references('id')->on('orders');
+            $table->unsignedBigInteger('id_carro');
+            $table->foreign('id_carro')->references('carro_id')->on('carros');
+            $table->unsignedBigInteger('id_documento');
+            $table->foreign('id_documento')->references('documento_id')->on('documentos');
             $table->timestamps();
         });
     }

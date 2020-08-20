@@ -15,6 +15,8 @@ class CreateDocumentosTable extends Migration
     {
         Schema::create('documentos', function (Blueprint $table) {
             $table->bigIncrements('documento_id');
+            $table->unsignedBigInteger('id_seguradora');
+            $table->foreign('id_seguradora')->references('seguradora_id')->on('seguradoras');
             $table->string('documento_nome');
             $table->string('documento_descr');
             $table->timestamps();

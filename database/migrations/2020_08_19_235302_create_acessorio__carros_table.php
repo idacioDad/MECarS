@@ -15,7 +15,10 @@ class CreateAcessorioCarrosTable extends Migration
     {
         Schema::create('acessorio__carros', function (Blueprint $table) {
             $table->bigIncrements('id');
-            //$table->acessorio_id();
+            $table->unsignedBigInteger('id_carro');
+            $table->foreign('id_carro')->references('carro_id')->on('carros');
+            $table->unsignedBigInteger('id_acessorio');
+            $table->foreign('id_acessorio')->references('acessorio_id')->on('acessorios');
             //$table->carro_id();
             $table->timestamps();
         });
