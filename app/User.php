@@ -36,4 +36,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    function profile() {
+        return $this->hasOne('App\User_Profile');
+    }
+
+    function order() {
+        return $this->hasOne('App\Order');
+    }
 }

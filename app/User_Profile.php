@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Order extends Model
+class User_Profile extends Model
 {
     function user() {
-        return $this->hasOne('App\User');
+        return $this->belongsTo('App\User');
     }
 }
