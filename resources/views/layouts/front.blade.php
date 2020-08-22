@@ -23,116 +23,13 @@
 
     <!-- /.preloader -->
     <div id="preloader"></div>
-    <div class="theme-layout">
-        
-        <div class="account-popup-sec"> 
-           
-            <div class="account-popup-area">
-                <div class="account-popup">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="account-user">
-                                <div class="logo">
-                                    <a href="#" title="">
-                                        <!--i class="fa fa-get-pocket"></i-->
-                                        <span><img src="{{asset('assets/img/logo.png')}}"></span>
-                                        <strong>SELL VEHICULS</strong>
-                                    </a>
-                                </div><!-- LOGO -->
-                                <form method="POST" action="{{ route('login') }}">
-                                @csrf
-
-                                    <h1>Login</h1>
-                                    <div class="field">
-                                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                            @error('email')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                    </div>
-                                    <div class="field">
-
-                                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                            @error('password')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-
-                                    </div>
-                                    <div class="field">
-                                        <input type="submit" value="Submeter" class="flat-btn" />
-                                    </div>
-                                </form>
-                                <i>OR</i>
-                                <span>LOGIN WITH</span>
-                                <ul class="social-btns">
-                                    <li><a href="#" title=""><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
-                                    <li><a href="#" title=""><i class="fa fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="registration-sec">
-                                <h1>Cadastrar-se</h1>
-                                <form method="POST" action="{{ route('register') }}">
-                                @csrf
-                                
-                                    <div class="field">
-                                         <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                        @error('name')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                    <div class="field">
-                                        
-                                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                        @error('email')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-
-                                    </div>
-                                    <div class="field">
-
-                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                        @error('password')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                    <div class="field">
-                                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                                    </div>                                   
-                                    <label>
-                                        <input type="checkbox" /> By Clicking on this You are agree with our <a href="#" title="">Terms & Condition</a>
-                                    </label>
-                                    <input type="submit" value="Registar" class="flat-btn" />
-                                </form>
-                            </div><!-- Registration sec -->
-                        </div>
-                    </div>
-                    <span class="close-popup"><i class="fa fa-close"></i></span>
-                </div>
-            </div>
-        </div><!-- Account Popup Sec -->
+    
 
          <header class="simple-header for-sticky white">
             <div class="top-bar">
                 <div class="container">
                     <ul class="contact-item">
-                        <li><i class="fa fa-envelope-o"></i>mecars@gmail.com</li>
+                        <li><i class="fa fa-envelope-o"></i>mecarsmz@gmail.com</li>
                         <li><i class="fa fa-mobile"></i>+258 845334398 / +258 872149445</li>
                     </ul>
                     <div class="choose-language">
@@ -146,26 +43,17 @@
             <div class="menu">
                 <div class="container">
                     <div class="logo">
-                        <a href="index.html" title="">
-                            <span><img src="{{asset('assets/img/logo.png')}}" width="100px" height="50px" ></span>
+                        <a href="{{url('/')}}" title="">
+                            <span><img src="{{asset('assets/img/logo.png')}}" width="100px" height="30px" ></span>
                             <strong>FACILIDADE E RAPIDEZ</strong>
                         </a>
                     </div><!-- LOGO -->
-                    <div class="popup-client">
-                        <span><i class="fa fa-user"></i> /  Signup</span>
-                    </div>
+            
                     <span class="menu-toggle"><i class="fa fa-bars"></i></span>
                     <nav>
                         <h1 class="nocontent outline">--- Main Navigation ---</h1>
                         <ul>
-                            <li class="menu-item-has-children">
-                                <a href="#" title="">HOME</a>
-                                <ul>
-                                    <li><a href="index.html" title="">Home v1</a></li>
-                                    <li><a href="index2.html" title="">Home v2</a></li>
-                                    <li><a href="index3.html" title="">Home v3</a></li>
-                                </ul>
-                            </li>
+                        
                             <li class="menu-item-has-children">
                                 <a href="#" title="">VEHICULS</a>
                                 <ul>
@@ -211,6 +99,30 @@
                             </li>
 
                             <li><a href="contact.html" title="">CONTACT</a></li>
+                            @guest
+                            <li>
+                                <a href="{{ route('login') }}"><i class="fa fa-user"></i> / LOGIN</a>
+                        </li>
+                        @if (Route::has('register'))
+                                <li>
+                                   <a href="{{ route('register') }}">{{ __('CADASTRAR-SE') }}</a>
+                                </li>
+                            @endif
+                            @else<li >
+                                <a id="navbarDropdown"  href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+                                </li>
+                                <li>
+                                    <a  href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('SAIR') }}
+                                    </a>
+                                    </li>
+                    
+
+                         @endguest
                         </ul>
                     </nav>
 
@@ -224,7 +136,7 @@
 
         <footer class="light-footer">
             <section class="top-line">
-                <div style="background: url(img/footer.jpg) repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible no-parallax whitish"></div><!-- PARALLAX BACKGROUND IMAGE -->	
+                <div style="background: url('{{asset('assets/img/ftr-bg.jpg')}}') repeat scroll 50% 422.28px transparent;" class="parallax scrolly-invisible no-parallax whitish"></div><!-- PARALLAX BACKGROUND IMAGE -->	
                 <div class="container">
                     <div class="row">   
 
@@ -234,7 +146,7 @@
                                     <h2><span>Useful</span> links</h2>
                                 </div><!-- heading -->
 
-                                <span><i class="fa fa-envelope"></i>yourcompany@gmail.com</span>
+                                <span><i class="fa fa-envelope"></i>mecarsmz@gmail.com</span>
                                 <span><i class="fa fa-phone"></i>0888 (29999996)</span>
                                 <span><i class="fa fa-location-arrow"></i>1234 Tokyo shibuia , WI 54115</span>
                                 <ul class="social-btns">

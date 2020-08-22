@@ -18,7 +18,7 @@
                                  data-endspeed="300" data-easing="Power4.easeOut" data-start="400" data-speed="600"
                                  data-y="130" data-hoffset="0" data-x="center"
                                  style="">
-                                <img alt="" src="{{asset('img/4.png')}}" style="width: 110px; height: 110px;">
+                                <img alt="" src="{{asset('assets/img/4.png')}}" style="width: 110px; height: 110px;">
                             </div>
                             <div class="tp-caption tentered_white_huge lft tp-resizeme" 
                                  data-endspeed="300" data-easing="Power4.easeOut" data-start="400" data-speed="600"
@@ -66,7 +66,7 @@
                         <li data-transition="fade" data-slotamount="7" data-masterspeed="2000" 
                             data-saveperformance="on"  data-title="Ken Burns Slide">
                             <!-- MAIN IMAGE -->
-                            <img src="img/slides/home1.jpg"  alt="2" data-lazyload="img/slides/home1.jpg" 
+                            <img src="{{asset('assets/img/slides/home1.jpg')}}"  alt="2" data-lazyload="{{asset('assets/img/slides/home1.jpg')}}" 
                                  data-bgposition="right top" data-kenburns="off" data-duration="12000" 
                                  data-ease="Power0.easeInOut" data-bgfit="115" data-bgfitend="100" 
                                  data-bgpositionend="center bottom"> 
@@ -74,7 +74,7 @@
                                  data-endspeed="300" data-easing="Power4.easeOut" data-start="400" data-speed="600"
                                  data-y="130" data-hoffset="0" data-x="center"
                                  style="">
-                                <img alt="" src="img/3.png" style="width: 110px; height: 110px;">
+                                <img alt="" src="{{asset('assets/img/3.png')}}" style="width: 110px; height: 110px;">
                             </div>
                             <div class="tp-caption tentered_white_huge lft tp-resizeme" 
                                  data-endspeed="300" data-easing="Power4.easeOut" data-start="400" data-speed="600"
@@ -123,7 +123,7 @@
                         <li data-transition="fade" data-slotamount="7" data-masterspeed="2000" 
                             data-saveperformance="on"  data-title="Ken Burns Slide">
                             <!-- MAIN IMAGE -->
-                            <img src="img/slides/home3.jpg"  alt="2" data-lazyload="img/slides/home3.jpg" 
+                            <img src="{{asset('assets/img/slides/home3.jpg')}}"  alt="2" data-lazyload="{{asset('assets/img/slides/home3.jpg')}}" 
                                  data-bgposition="right top" data-kenburns="off" data-duration="12000" 
                                  data-ease="Power0.easeInOut" data-bgfit="115" data-bgfitend="100" 
                                  data-bgpositionend="center bottom"> 
@@ -131,7 +131,7 @@
                                  data-endspeed="300" data-easing="Power4.easeOut" data-start="400" data-speed="600"
                                  data-y="130" data-hoffset="0" data-x="center"
                                  style="">
-                                <img alt=""  src="img/3.png" style="width: 110px; height: 110px;">
+                                <img alt=""  src="{{asset('assets/img/3.png')}}" style="width: 110px; height: 110px;">
                             </div>
                             <div class="tp-caption tentered_white_huge lft tp-resizeme" 
                                  data-endspeed="300" data-easing="Power4.easeOut" data-start="400" data-speed="600"
@@ -178,13 +178,14 @@
                     <div class="tp-bannertimer"></div>
                 </div>
             </div>
+        </div>
 
 
        
 
 
         <section class="block">
-            <div style="background: url(img/call-to-action-bg.jpg) repeat scroll 50% 422.28px transparent; background-attachment: fixed;" class="parallax scrolly-invisible  blackish"></div><!-- PARALLAX BACKGROUND IMAGE -->	
+            <div style="background: url('{{asset('assets/img/call-to-action-bg.jpg')}}') repeat scroll 50% 422.28px transparent; background-attachment: fixed;" class="parallax scrolly-invisible  blackish"></div><!-- PARALLAX BACKGROUND IMAGE -->	
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
