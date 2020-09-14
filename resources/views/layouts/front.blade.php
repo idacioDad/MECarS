@@ -54,51 +54,37 @@
                         <h1 class="nocontent outline">--- Main Navigation ---</h1>
                         <ul>
                         
-                            <li class="menu-item-has-children">
-                                <a href="#" title="">VEHICULS</a>
-                                <ul>
-                                    <li><a href="vehiculs3.html" title="">vehiculs- Super </a></li>       
-                                    <li><a href="vehiculs.html" title="">vehiculs- List</a></li>
-                                    <li><a href="vehiculs2.html" title="">vehiculs- Grid</a></li>                             
-                                    <li><a href="vehicul.html" title="">vehicul details</a></li>              
-                                </ul>
+                            <li>
+                                <a href="{{ url('/catalogo/show') }}" title="Loja de Carros">CARROS</a>
+                                
                             </li>
-                            <li><a href="vehicul.html" title="">VEHICUL</a></li>
+                           
 
                             <li class="menu-item-has-children mega">
-                                <a href="#" title="">PAGES</a>
+                                <a href="#" title="">PAGINAS</a>
                                 <ul>                                    
-                                    <li><a href="comingsoon.html" title="">Coming Soon</a></li> 
-                                    <li><a href="agents-listing.html" title="">Agent Listing </a></li> 
-                                    <li><a href="terms-conditions.html" title="">Terms & conditions</a></li> 
+                                    <li><a href="comingsoon.html" title="">Brevemente</a></li> 
+                                    <li><a href="agents-listing.html" title="">Parques </a></li> 
+                                    <li><a href="{{ url('/pages/terms-condition') }}" title="">Termos & condições</a></li> 
 
                                     <li><a href="agent.html" title="">Agent page</a></li> 
                                     <li><a href="agent2.html" title="">Agent 2 page</a></li> 
                                     <li><a href="agent3.html" title="">Agent 3 page</a></li> 
 
-                                    <li><a href="my-profile.html" title="">Profile page</a></li>
+                                    <li><a href="my-profile.html" title="">Perfil</a></li>
                                     <li><a href="submit.html" title="">Submit page</a></li>
                                     <li><a href="login.html" title="">Login page</a></li>
 
-                                    <li><a href="contact.html" title="">Contact Us</a></li>
+                                    <li><a href="{{ url('/pages/contacto') }}" title="">Contacte-nos</a></li>
                                     <li><a href="404.html" title="">404 Error </a></li> 
-                                    <li><a href="faq.html" title="">FAQ page</a></li>
+                                    <li><a href="{{ url('/pages/faq') }}" title="">FAQ </a></li>
                                     <li><a href="faq.html" title="">VEHICUL LEFT SIDE</a></li>
                                 </ul>
                             </li>
 
-                            <li class="menu-item-has-children">
-                                <a href="#" title="">BLOG PAGES</a>
-                                <ul>
-                                    <li><a href="blog.html" title="">Blog Page</a></li>
-                                    <li><a href="blog-sidebar.html" title="">Blog left Sidebar</a></li>
-                                    <li><a href="single.html" title="">Single Post</a></li>
-                                    <li><a href="single-left-sidebar.html" title="">Single Left sidebar</a></li>
-                                    <li><a href="single-no-sidebar.html" title="">Single No Sidebar</a></li>
-                                </ul>
-                            </li>
+                           
 
-                            <li><a href="contact.html" title="">CONTACT</a></li>
+                            <li><a href="{{ url('/pages/contacto') }}" title="">CONTACTO</a></li>
                             @guest
                             <li>
                                 <a href="{{ route('login') }}"><i class="fa fa-user"></i> / LOGIN</a>
@@ -143,14 +129,14 @@
                         <div class="col-md-3 column">
                             <div class="about_widget widget">
                                 <div class="heading1">
-                                    <h2><span>Useful</span> links</h2>
+                                    <h2><span>Nossos</span> Contactos</h2>
                                 </div><!-- heading -->
 
                                 <span><i class="fa fa-envelope"></i>mecarsmz@gmail.com</span>
-                                <span><i class="fa fa-phone"></i>0888 (29999996)</span>
-                                <span><i class="fa fa-location-arrow"></i>1234 Tokyo shibuia , WI 54115</span>
+                                <span><i class="fa fa-phone"></i>+258 845334398</span>
+                                <span><i class="fa fa-location-arrow"></i>1112 Maputo Bairro Central , Av. 25 Setembro N.º 1011</span>
                                 <ul class="social-btns">
-                                    <li><a href="#" title=""><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="https://web.facebook.com/MECarS-103718001442279" title=""><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
                                     <li><a href="#" title=""><i class="fa fa-linkedin"></i></a></li>
                                     <li><a href="#" title=""><i class="fa fa-dribbble"></i></a></li>
@@ -163,13 +149,13 @@
                         <div class="col-md-3 column">
                             <div class="links_widget widget">
                                 <div class="heading1">
-                                    <h2><span>Useful</span> links</h2>
+                                    <h2><span>Ligações</span> Rápidas</h2>
                                 </div><!-- heading -->
                                 <ul>
-                                    <li><a href="#" title=""><i class="fa fa-angle-right"></i> Home</a></li>
-                                    <li><a href="#" title=""><i class="fa fa-angle-right"></i> About us</a></li>
-                                    <li><a href="#" title=""><i class="fa fa-angle-right"></i> Services</a></li> 
-                                    <li><a href="#" title=""><i class="fa fa-angle-right"></i> Services</a></li> 
+                                    <li><a href="#" title=""><i class="fa fa-angle-right"></i> Página Inicial</a></li>
+                                    <li><a href="#" title=""><i class="fa fa-angle-right"></i> Sobre Nós</a></li>
+                                    <li><a href="#" title=""><i class="fa fa-angle-right"></i> FAQ</a></li> 
+                                    <li><a href="#" title=""><i class="fa fa-angle-right"></i> Termos e Condições</a></li> 
                                 </ul>
                             </div>
                         </div>
@@ -191,11 +177,11 @@
                         <div class="col-md-3 column">
                             <div class="subscribe_widget widget">
                                 <div class="heading1">
-                                    <h2><span>Subscribe</span> Us</h2>
+                                    <h2><span>Subscreva-</span> Te</h2>
                                 </div><!-- heading -->
-                                <p>Positioning the closest positioned for abs positioning</p>
+                                <p>Fique a par de todas as novidades.</p>
                                 <form>
-                                    <label><input type="text" placeholder="TYPE YOUR EMAIL" /></label>
+                                    <label><input type="text" placeholder="ESCREVA O TEU EMAIL" /></label>
                                     <button type="submit" class="flat-btn"><i class="ti ti-email"></i></button>
                                 </form>
                             </div>
@@ -206,13 +192,12 @@
             </section>
             <div class="bottom-line">
                 <div class="container">
-                    <span>Copyright All Right Reserved 2020 <a href="#" title="">MECarS</a></span>
+                    <span> MECarS © 2020-<?php echo date("Y"); ?> <a href="#" title="">MECarS</a></span>
                     <ul>
-                        <li><a title="" href="#">HOME</a></li>
-                        <li><a title="" href="#">ABOUT</a></li>
-                        <li><a title="" href="#">VEHICULS</a></li>
-                        <li><a title="" href="#">BLOG</a></li>
-                        <li><a title="" href="#">CONTACT</a></li>
+                        <li><a title="" href="#">PÁGINA INICIAL</a></li>
+                        <li><a title="" href="#">SOBRE NÓS</a></li>
+                        <li><a title="" href="#">LOJA</a></li>
+                        <li><a title="" href="#">CONTACTOS</a></li>
                     </ul>
                 </div>
             </div>
@@ -360,5 +345,7 @@
 
         });
     </script>
+
+@yield('content') 
 </body>
 </html>

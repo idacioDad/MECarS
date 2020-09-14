@@ -25,6 +25,8 @@
     <link href="{{ asset('base-assets/dist-assets/css/plugins/perfect-scrollbar.css') }}" rel="stylesheet" />
     <link href="{{ asset('base-assets/dist-assets/css/plugins/fontawesome-5.css') }}" rel="stylesheet" />
     <link href="{{ asset('base-assets/dist-assets/css/plugins/metisMenu.min.css') }}" rel="stylesheet" />
+    <link id="gull-theme" rel="stylesheet" href="{{asset('admin/styles/css/themes/lite-purple.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('admin/styles/vendor/perfect-scrollbar.css') }}">
     {{--Incluir os fichiros css--}}
 
 
@@ -801,16 +803,24 @@
                                <div class="breadcrumb">
                
                 <ul>
-                    <li><a href="#">Dashboard</a></li>
-                    
-                </ul>
-            </div>
-
-            <div class="separator-breadcrumb border-top"></div>
+                   
 
             @yield('content')
 
 
+
+            <div class="customizer">
+    <div class="handle" (click)="isOpen = !isOpen">
+        <i class="i-Gear spin"></i>
+    </div>
+    <div class="customizer-body" data-perfect-scrollbar data-suppress-scroll-x="true">
+        <div class="accordion" id="accordionCustomizer">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <p class="mb-0">
+                        Sidebar Layout
+                    </p>
+                </div>
 
 
     {{--Incluir os fichiros js--}}

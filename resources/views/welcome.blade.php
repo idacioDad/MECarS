@@ -203,23 +203,23 @@
         <section class="block">
             <div class="container">
                 <div class="heading4">
-                    <h2>FEATURED VEHICULS</h2>
+                    <h2>Produtos em Destaque</h2>
                     <span>Lorem ipsum dolor consectetu</span>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
+                <!--div class="row"-->
+                    <!--div class="col-md-12"-->
                         <div class="vehiculs-sec">
                             <div class="row">                                
                                 <div class="col-md-4">
                                     <div class="vehiculs-box">
                                         <div class="vehiculs-thumb">
-                                            <img src="img/demo/vehicul4.jpg" alt="" />
+                                            <img src="{{asset('assets/img/demo/vehicul4.jpg')}}" alt="" />
                                             <span class="spn-status"> Semi-New </span>
                                             <span class="spn-save"> <i class="ti ti-heart"></i> </span>
 
                                             <div class="user-preview">
                                                 <a class="col" href="agent.html">
-                                                    <img alt="Camilė" class="avatar avatar-small" src="img/4.png" title="Camilė">
+                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/4.png')}}" title="Camilė">
                                                 </a> 
                                             </div> 
                                             <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
@@ -245,13 +245,13 @@
                                 <div class="col-md-4">
                                     <div class="vehiculs-box">
                                         <div class="vehiculs-thumb">
-                                            <img src="img/demo/vehicul3.jpg" alt="" />
+                                            <img src="{{asset('assets/img/demo/vehicul3.jpg')}}" alt="" />
                                             <span class="spn-status"> Damaged </span>
                                             <span class="spn-save"> <i class="ti ti-heart"></i> </span>
 
                                             <div class="user-preview">
                                                 <a class="col" href="agent.html">
-                                                    <img alt="Camilė" class="avatar avatar-small" src="img/1.png" title="Camilė">
+                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/1.png')}}" title="Camilė">
                                                 </a> 
                                             </div> 
                                             <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
@@ -277,13 +277,13 @@
                                 <div class="col-md-4">
                                     <div class="vehiculs-box">
                                         <div class="vehiculs-thumb">
-                                            <img src="img/demo/vehicul2.jpg" alt="" />
+                                            <img src="{{asset('assets/img/demo/vehicul2.jpg')}}" alt="" />
                                             <span class="spn-status"> Semi-New </span>
                                             <span class="spn-save"> <i class="ti ti-heart"></i> </span>
 
                                             <div class="user-preview">
                                                 <a class="col" href="agent.html">
-                                                    <img alt="Camilė" class="avatar avatar-small" src="img/2.png" title="Camilė">
+                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/2.png')}}" title="Camilė">
                                                 </a> 
                                             </div> 
                                             <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
@@ -309,13 +309,13 @@
                                 <div class="col-md-4">
                                     <div class="vehiculs-box">
                                         <div class="vehiculs-thumb">
-                                            <img src="img/demo/vehicul4.jpg" alt="" />
+                                            <img src="{{asset('assets/img/demo/vehicul4.jpg')}}" alt="" />
                                             <span class="spn-status"> Damaged </span>
                                             <span class="spn-save"> <i class="ti ti-heart"></i> </span>
 
                                             <div class="user-preview">
                                                 <a class="col" href="agent.html">
-                                                    <img alt="Camilė" class="avatar avatar-small" src="img/4.png" title="Camilė">
+                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/4.png')}}" title="Camilė">
                                                 </a> 
                                             </div> 
                                             <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
@@ -341,13 +341,13 @@
                                 <div class="col-md-4">
                                     <div class="vehiculs-box">
                                         <div class="vehiculs-thumb">
-                                            <img src="img/demo/vehicul5.jpg" alt="" />
+                                            <img src="{{asset('assets/img/demo/vehicul5.jpg')}}" alt="" />
                                             <span class="spn-status"> Used </span>
                                             <span class="spn-save"> <i class="ti ti-heart"></i> </span>
 
                                             <div class="user-preview">
                                                 <a class="col" href="agent.html">
-                                                    <img alt="Camilė" class="avatar avatar-small" src="img/3.png" title="Camilė">
+                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/3.png')}}" title="Camilė">
                                                 </a> 
                                             </div> 
                                             <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
@@ -373,13 +373,13 @@
                                 <div class="col-md-4">
                                     <div class="vehiculs-box">
                                         <div class="vehiculs-thumb">
-                                            <img src="img/demo/vehicul3.jpg" alt="" />
+                                            <img src="{{asset('assets/img/demo/vehicul3.jpg')}}" alt="" />
                                             <span class="spn-status"> Damaged</span>
                                             <span class="spn-save"> <i class="ti ti-heart"></i> </span>
 
                                             <div class="user-preview">
                                                 <a class="col" href="agent.html">
-                                                    <img alt="Camilė" class="avatar avatar-small" src="img/2.png" title="Camilė">
+                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/2.png')}}" title="Camilė">
                                                 </a> 
                                             </div> 
                                             <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
@@ -404,26 +404,25 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    <!--/div>
+                </div-->
             </div>
         </section>
-
-        <!-- Galeria de Parques de Viaturas -->
-        <section class="block">
-            <div style="background: transparent url(&quot;img/call-to-action-big.jpg&quot;) repeat scroll 50% 0px; background-attachment: fixed;" class="parallax scrolly-invisible  blackish"></div>
+<!-- Galeria de Parques de Viaturas -->
+<section class="block">
+            <div style="background: transparent url(&quot;{{asset('assets/img/call-to-action-big.jpg')}}&quot;) repeat scroll 50% 0px; background-attachment: fixed;" class="parallax scrolly-invisible  blackish"></div>
             <div class="container">                
                 <div class="row">
                     <div class="col-md-12">
                         <div class="heading4">
-                            <h2>Parques</h2>
+                            <h2>OUR AGENTS</h2>
                             <span>Lorem ipsum dolor</span>
                         </div>
                         <div class="agents-carousal-sec">
                             <ul class="carousel">
                                 <li>
                                     <div class="agent-content">
-                                        <a href="agent.html"><img src="img/agents/agent1.jpg" alt="" /></a>
+                                        <a href="agent.html"><img src="{{asset('assets/img/agents/agent1.jpg')}}" alt="" /></a>
                                         <h3>SUPER AGENT</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur <br> sed do eiusmod tempor incidid</p>
 
@@ -440,7 +439,7 @@
                                 </li>
                                 <li>
                                     <div class="agent-content">
-                                        <a href="agent.html"><img src="img/agents/agent3.jpg" alt="" /></a>
+                                        <a href="agent.html"><img src="{{asset('assets/img/agents/agent3.jpg')}}" alt="" /></a>
                                         <h3>SUPER AGENT</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur <br> sed do eiusmod tempor incidid</p>
 
@@ -457,7 +456,7 @@
                                 </li>
                                 <li>
                                     <div class="agent-content">
-                                        <a href="agent.html"><img src="img/agents/agent5.jpg" alt="" /></a>
+                                        <a href="agent.html"><img src="{{asset('assets/img/agents/agent5.jpg')}}" alt="" /></a>
                                         <h3>SUPER AGENT</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur <br> sed do eiusmod tempor incidid</p>
 
@@ -474,7 +473,7 @@
                                 </li>
                                 <li>
                                     <div class="agent-content">
-                                        <a href="agent.html"><img src="img/agents/agent4.jpg" alt="" /></a>
+                                        <a href="agent.html"><img src="{{asset('assets/img/agents/agent4.jpg')}}" alt="" /></a>
                                         <h3>SUPER AGENT</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur <br> sed do eiusmod tempor incidid</p>
 
@@ -497,37 +496,37 @@
         </section>
 
 <!-- Exposicao Agencias Seguradoras -->
-        <section class="block">
+<section class="block">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="agents-carousal-sec">
                             <div class="heading4">
-                                <h2>Nossos Parceiros </h2>
+                                <h2>OUR PARTNERS </h2>
                                 <span>Lorem ipsum dolor</span>
                             </div>
                             <div class="our-clients-sec">
                                 <ul class="carousel-client">
                                     <li>
-                                        <a href="#" title=""><img src="img/clients/our-client1.jpg" alt="" /></a>
+                                        <a href="#" title=""><img src="{{asset('asssets/img/clients/our-client1.jpg')}}" alt="" /></a>
                                     </li>
                                     <li>
-                                        <a href="#" title=""><img src="img/clients/our-client2.jpg" alt="" /></a>
+                                        <a href="#" title=""><img src="{{asset('asssets/img/clients/our-client2.jpg')}}" alt="" /></a>
                                     </li>
                                     <li>
-                                        <a href="#" title=""><img src="img/clients/our-client3.jpg" alt="" /></a>
+                                        <a href="#" title=""><img src="{{asset('asssets/img/clients/our-client3.jpg')}}" alt="" /></a>
                                     </li>
                                     <li>
-                                        <a href="#" title=""><img src="img/clients/our-client4.jpg" alt="" /></a>
+                                        <a href="#" title=""><img src="{{asset('asssets/img/clients/our-client4.jpg')}}" alt="" /></a>
                                     </li>
                                     <li>
-                                        <a href="#" title=""><img src="img/clients/our-client5.jpg" alt="" /></a>
+                                        <a href="#" title=""><img src="{{asset('asssets/img/clients/our-client5.jpg')}}" alt="" /></a>
                                     </li>
                                     <li>
-                                        <a href="#" title=""><img src="img/clients/our-client1.jpg" alt="" /></a>
+                                        <a href="#" title=""><img src="{{asset('asssets/img/clients/our-client1.jpg')}}" alt="" /></a>
                                     </li>
                                     <li>
-                                        <a href="#" title=""><img src="img/clients/our-client3.jpg" alt="" /></a>
+                                        <a href="#" title=""><img src="{{asset('asssets/img/clients/our-client3.jpg')}}" alt="" /></a>
                                     </li>
                                 </ul>
                             </div>
@@ -536,5 +535,6 @@
                 </div>
             </div>
         </section>    
+
 
 @endsection

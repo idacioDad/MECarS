@@ -14,7 +14,10 @@ class FabricanteController extends Controller
      */
     public function index()
     {
-        //
+        $fabricantes = Fabricante::all();
+        /*$fabricante = json_decode(json_decode($fabricantes));
+        echo "<prev>"; print_r($fabricantes);die;*/
+        return view('admin.fabricantes.index')->with(compact('fabricantes'));
     }
 
     /**
@@ -25,6 +28,8 @@ class FabricanteController extends Controller
     public function create()
     {
         //
+        return view('admin.fabricantes.create');
+        
     }
 
     /**
@@ -35,7 +40,15 @@ class FabricanteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            
+        'fabricante_nome'=>'required'
+        ]);       
+        $validated = $request->validated();
+        Fabricante::create($request->all());
+        return redirect()->route('/admin/fabricantes')->with('successo', 'Adicionou um Novo Fabricado!');
+
+        
     }
 
     /**
@@ -44,9 +57,9 @@ class FabricanteController extends Controller
      * @param  \App\Fabricante  $fabricante
      * @return \Illuminate\Http\Response
      */
-    public function show(Fabricante $fabricante)
+    public function show($id)
     {
-        //
+        //return view('admin.fabricantes.show',compact('fabricante'));
     }
 
     /**
@@ -55,9 +68,10 @@ class FabricanteController extends Controller
      * @param  \App\Fabricante  $fabricante
      * @return \Illuminate\Http\Response
      */
-    public function edit(Fabricante $fabricante)
+    public function edit($id)
     {
-        //
+        $fabricante = Fabricante::find($id);
+        return view('admin.fabricantes.edit',  compact('fabricante'));
     }
 
     /**
@@ -67,9 +81,18 @@ class FabricanteController extends Controller
      * @param  \App\Fabricante  $fabricante
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Fabricante $fabricante)
+    public function update(Request $request, $id)
     {
-        //
+
+        $request->validate([
+
+            'fabricante_id' => 'required',
+            'fabricante_nome' => 'required'
+        ]);
+
+        $fabricante->update($request->all());
+        return redirect()->route('admin.fabricantes.index') ->with('successo','Actualizou o nome do fabricante!');
+
     }
 
     /**
@@ -78,8 +101,10 @@ class FabricanteController extends Controller
      * @param  \App\Fabricante  $fabricante
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Fabricante $fabricante)
+    public function destroy($id)
     {
-        //
+        $fabricante = Fabricante::find($id);
+        $fabricante->delete();
+        return redirect('admin.fabricantes')->with('success', 'Fabricante deleted!');
     }
 }
