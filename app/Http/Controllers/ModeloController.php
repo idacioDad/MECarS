@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Modelo;
+use App\Fabricante;
 use Illuminate\Http\Request;
 
 class ModeloController extends Controller
@@ -14,7 +15,9 @@ class ModeloController extends Controller
      */
     public function index()
     {
-        //
+        $modelos = Modelo::with('fabricantes')->get();
+
+        return view('admin.modelos.index')->with(compact('modelos'));
     }
 
     /**
@@ -24,7 +27,8 @@ class ModeloController extends Controller
      */
     public function create()
     {
-        //
+        $fabricantes = Fabricante::all(['fabricante_id', 'fabricante_nome']);
+        return view('admin.modelos.create')->with(['fabricantes'=> $fabricantes]);
     }
 
     /**
@@ -35,7 +39,12 @@ class ModeloController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([   
+            'modelo_nome'=>'required',
+            'id_fabricante'=>'required',
+            ]);       
+            Modelo::create($request->all());
+            return redirect()->route('modelos.index')->with('successo', 'Adicionou um Novo Modelo!');
     }
 
     /**
@@ -57,7 +66,8 @@ class ModeloController extends Controller
      */
     public function edit(Modelo $modelo)
     {
-        //
+        $modelos = Modelo::with('fabricantes')->get();
+        return view('admin.modelos.edit')->with(compact('modelos','modelo'));
     }
 
     /**
@@ -69,7 +79,13 @@ class ModeloController extends Controller
      */
     public function update(Request $request, Modelo $modelo)
     {
-        //
+        $request->validate([
+            'modelo_nome'=>'required',
+            'id_fabricante' => 'required',
+        ]);
+
+        $modelo->update($request->all());
+        return redirect()->route('modelos.index') ->with('successo','Actualizou o nome do Modelo!');
     }
 
     /**
@@ -80,6 +96,7 @@ class ModeloController extends Controller
      */
     public function destroy(Modelo $modelo)
     {
-        //
+        $modelo->delete();
+        return redirect()->route('modelos.index')->with('successo', 'Modelo Removido!');
     }
 }

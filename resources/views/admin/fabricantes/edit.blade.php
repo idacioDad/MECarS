@@ -14,7 +14,7 @@
     <div class="card">
         <div class="card-header">
             <h3 class="card-title">Editar Fabricantes</h3>
-            <a href="{{url('admin/fabricantes/index')}}" style="max-width: 150px; float:right; display:inline;" class="btn btn-block btn-success">Lista de Fabricante</a>
+            <a href="{{url('admin/fabricantes')}}" style="max-width: 150px; float:right; display:inline;" class="btn btn-block btn-success">Lista de Fabricante</a>
         </div>
         <div class="card-body">
         <div class="">
@@ -41,7 +41,7 @@
                                 <div class="row">
                                     <div class="col-md-6 form-group mb-3">
                                         <label for="fabricante_nome">Nome do fabricante</label>
-                                        <input type="text" class="form-control form-control-rounded" id="fabricante_nome" value="{{ $fabricante->fabricante_nome }}" placeholder="Digite o nome do Fabricante">
+                                        <input type="text" class="form-control form-control-rounded" name="fabricante_nome" id="fabricante_nome" value="{{ $fabricante->fabricante_nome }}" placeholder="Digite o nome do Fabricante">
                                     </div>
 
                                    

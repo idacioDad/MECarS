@@ -15,8 +15,7 @@ class FabricanteController extends Controller
     public function index()
     {
         $fabricantes = Fabricante::all();
-        /*$fabricante = json_decode(json_decode($fabricantes));
-        echo "<prev>"; print_r($fabricantes);die;*/
+
         return view('admin.fabricantes.index')->with(compact('fabricantes'));
     }
 
@@ -27,7 +26,7 @@ class FabricanteController extends Controller
      */
     public function create()
     {
-        //
+        
         return view('admin.fabricantes.create');
         
     }
@@ -40,13 +39,11 @@ class FabricanteController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            
-        'fabricante_nome'=>'required'
+        $request->validate([   
+        'fabricante_nome'=>'required',
         ]);       
-        $validated = $request->validated();
         Fabricante::create($request->all());
-        return redirect()->route('/admin/fabricantes')->with('successo', 'Adicionou um Novo Fabricado!');
+        return redirect()->route('admin.fabricantes.index')->with('successo', 'Adicionou um Novo Fabricante!');
 
         
     }
@@ -57,7 +54,7 @@ class FabricanteController extends Controller
      * @param  \App\Fabricante  $fabricante
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Fabricante $fabricante)
     {
         //return view('admin.fabricantes.show',compact('fabricante'));
     }
@@ -68,9 +65,8 @@ class FabricanteController extends Controller
      * @param  \App\Fabricante  $fabricante
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Fabricante $fabricante)
     {
-        $fabricante = Fabricante::find($id);
         return view('admin.fabricantes.edit',  compact('fabricante'));
     }
 
@@ -81,13 +77,11 @@ class FabricanteController extends Controller
      * @param  \App\Fabricante  $fabricante
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Fabricante $fabricante)
     {
 
         $request->validate([
-
-            'fabricante_id' => 'required',
-            'fabricante_nome' => 'required'
+            'fabricante_nome' => 'required',
         ]);
 
         $fabricante->update($request->all());
@@ -101,10 +95,23 @@ class FabricanteController extends Controller
      * @param  \App\Fabricante  $fabricante
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Fabricante $fabricante)
     {
-        $fabricante = Fabricante::find($id);
+     
         $fabricante->delete();
-        return redirect('admin.fabricantes')->with('success', 'Fabricante deleted!');
+        return redirect()->route('admin.fabricantes.index')->with('success', 'Fabricante Removido!');
     }
+
+    public function dropDownShow(Request $request)
+
+{
+
+   $fabricantes = Item::pluck('fabricante_id', 'fabricante_nome');
+
+   $selectedID = 2;
+
+   return view('admin.modelos.create', compact('fabricantes'));
+
+}
+
 }

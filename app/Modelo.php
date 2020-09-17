@@ -6,7 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Modelo extends Model
 {
-    function fabricante() {
+
+
+     
+    protected $primaryKey = 'modelo_id';
+    protected $fillable = [
+        'id_fabricante','modelo_nome'       
+    ];
+
+    function fabricantes() {
         return $this->belongsTo('App\Fabricante', 'id_fabricante','fabricante_id');
     }
 

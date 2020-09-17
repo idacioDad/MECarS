@@ -55,6 +55,9 @@ Route::get('/admin/index', function () {
 });
 
 
+//modelos
+Route::resource('admin/modelos','ModeloController');
+
 //Fabricante
 Route::resource('fabricantes','FabricanteController');
 
@@ -62,11 +65,15 @@ Route::get('/admin/fabricantes/create', function () {
     return view('admin.fabricantes.create');
 });
 
+Route::get('/admin/fabricantes', function () {
+    return view('admin.fabricantes.index');
+});
+
 Route::get('admin/fabricantes', 'FabricanteController@index');
 Route::post('admin/fabricantes','FabricanteController@store');
-Route::get('admin/fabricantes/add', 'FabricanteController@create');
+Route::get('admin/fabricantes/create', 'FabricanteController@create');
 Route::get('admin/fabricantes/{fabrricante}','FabricanteController@show');
-//Route::get('admin/fabricantes/{fabricante}/edit','FabricanteController@edit');
+Route::get('admin/fabricantes/{fabricante}/edit','FabricanteController@edit');
 Route::patch('admin/fabricantes/{fabricante}','FabricanteController@update');
 Route::delete('admin/fabricantes/{fabricante}','FabricanteController@destroy');
 
