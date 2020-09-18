@@ -15,7 +15,7 @@ class CreateAcessoriosTable extends Migration
     {
         Schema::create('acessorios', function (Blueprint $table) {
             $table->bigIncrements('acessorio_id');
-            $table->string('modelo_nome');
+            $table->string('acessorio_nome');
             $table->timestamps();
         });
     }

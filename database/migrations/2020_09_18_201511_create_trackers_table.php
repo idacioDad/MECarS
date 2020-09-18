@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateParquesTable extends Migration
+class CreateTrackersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateParquesTable extends Migration
      */
     public function up()
     {
-        Schema::create('parques', function (Blueprint $table) {
-            $table->bigIncrements('parque_id');
-            $table->string('parque_nome');
-            $table->string('parque_logo')->nullable();
-            $table->string('parque_email');
-            $table->bigInteger('parque_contacto');
+        Schema::create('trackers', function (Blueprint $table) {
+            $table->bigIncrements('tracker_id');
+            $table->string('tracker_nome');
+            $table->string('tracker_logo')->nullable();
+            $table->string('tracker_email');
+            $table->bigInteger('tracker_contacto');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateParquesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('parques');
+        Schema::dropIfExists('trackers');
     }
 }

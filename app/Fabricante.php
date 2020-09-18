@@ -13,7 +13,7 @@ class Fabricante extends Model
         'fabricante_nome'       
     ];
 
-    function modelo() {
+    function modelos() {
         return $this->hasMany('App\Modelo','modelo_id','modelo_id');
     }
 }

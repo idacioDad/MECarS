@@ -19,7 +19,6 @@ class CreateSeguradorasTable extends Migration
             $table->string('seguradora_logo')->nullable();
             $table->string('seguradora_email');
             $table->bigInteger('seguradora_contacto');
-            $table->string('seguradora_avenida');
             $table->timestamps();
         });
     }

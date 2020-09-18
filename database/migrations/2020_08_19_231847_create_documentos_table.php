@@ -17,6 +17,10 @@ class CreateDocumentosTable extends Migration
             $table->bigIncrements('documento_id');
             $table->unsignedBigInteger('id_seguradora');
             $table->foreign('id_seguradora')->references('seguradora_id')->on('seguradoras');
+            $table->unsignedBigInteger('id_parque');
+            $table->foreign('id_parque')->references('parque_id')->on('parques');
+            $table->unsignedBigInteger('id_trackers');
+            $table->foreign('id_trackers')->references('tracker_id')->on('trackers');
             $table->string('documento_nome');
             $table->string('documento_descr');
             $table->timestamps();

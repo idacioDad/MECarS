@@ -43,7 +43,7 @@ class FabricanteController extends Controller
         'fabricante_nome'=>'required',
         ]);       
         Fabricante::create($request->all());
-        return redirect()->route('admin.fabricantes.index')->with('successo', 'Adicionou um Novo Fabricante!');
+        return redirect()->route('fabricantes.index')->with('successo', 'Adicionou um Novo Fabricante!');
 
         
     }
@@ -85,7 +85,7 @@ class FabricanteController extends Controller
         ]);
 
         $fabricante->update($request->all());
-        return redirect()->route('admin.fabricantes.index') ->with('successo','Actualizou o nome do fabricante!');
+        return redirect()->route('fabricantes.index') ->with('successo','Actualizou o nome do fabricante!');
 
     }
 
@@ -99,19 +99,8 @@ class FabricanteController extends Controller
     {
      
         $fabricante->delete();
-        return redirect()->route('admin.fabricantes.index')->with('success', 'Fabricante Removido!');
+        return redirect()->route('fabricantes.index')->with('success', 'Fabricante Removido!');
     }
 
-    public function dropDownShow(Request $request)
-
-{
-
-   $fabricantes = Item::pluck('fabricante_id', 'fabricante_nome');
-
-   $selectedID = 2;
-
-   return view('admin.modelos.create', compact('fabricantes'));
-
-}
 
 }

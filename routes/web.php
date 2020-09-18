@@ -54,27 +54,17 @@ Route::get('/admin/index', function () {
     return view('admin.index');
 });
 
+//Categorias
+Route::resource('admin/categorias','CategoriaController');
 
 //modelos
 Route::resource('admin/modelos','ModeloController');
 
 //Fabricante
-Route::resource('fabricantes','FabricanteController');
+Route::resource('admin/fabricantes','FabricanteController');
 
-Route::get('/admin/fabricantes/create', function () {
-    return view('admin.fabricantes.create');
-});
+//Seguradoras
+Route::resource('admin/seguradoras','SeguradoraController');
 
-Route::get('/admin/fabricantes', function () {
-    return view('admin.fabricantes.index');
-});
-
-Route::get('admin/fabricantes', 'FabricanteController@index');
-Route::post('admin/fabricantes','FabricanteController@store');
-Route::get('admin/fabricantes/create', 'FabricanteController@create');
-Route::get('admin/fabricantes/{fabrricante}','FabricanteController@show');
-Route::get('admin/fabricantes/{fabricante}/edit','FabricanteController@edit');
-Route::patch('admin/fabricantes/{fabricante}','FabricanteController@update');
-Route::delete('admin/fabricantes/{fabricante}','FabricanteController@destroy');
 
 

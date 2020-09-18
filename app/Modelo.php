@@ -18,7 +18,7 @@ class Modelo extends Model
         return $this->belongsTo('App\Fabricante', 'id_fabricante','fabricante_id');
     }
 
-    function carro() {
+    function carros() {
         return $this->hasMany('App\Carro','carro_id','carro_id');
     }
 }

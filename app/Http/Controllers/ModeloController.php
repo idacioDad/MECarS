@@ -67,6 +67,7 @@ class ModeloController extends Controller
     public function edit(Modelo $modelo)
     {
         $modelos = Modelo::with('fabricantes')->get();
+        $fabricantes = Fabricante::all(['fabricante_id', 'fabricante_nome']);
         return view('admin.modelos.edit')->with(compact('modelos','modelo'));
     }
 

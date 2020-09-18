@@ -6,7 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Seguradora extends Model
 {
-    function documento() {
+
+    protected $primaryKey = 'seguradora_id';
+    protected $fillable = [
+        'id_fabricante','seguradora_nome','seguradora_logo', 'seguradora_email','seguradora_contacto'       
+    ];
+
+    function documentos() {
         return $this->hasMany('App\Documento','seguradora_id','documento_id');
     }
 }
