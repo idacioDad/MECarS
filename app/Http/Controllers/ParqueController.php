@@ -14,7 +14,9 @@ class ParqueController extends Controller
      */
     public function index()
     {
-        //
+        $parques = Parque::all();
+
+        return view('admin.parques.index')->with(compact('parques'));
     }
 
     /**
@@ -24,7 +26,7 @@ class ParqueController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.parques.create');
     }
 
     /**
@@ -35,7 +37,25 @@ class ParqueController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([   
+            'parque_nome'=>'required', 'parque_logo'=> 'required|image|max:2048',
+            'parque_email'=>'required','parque_contacto'=>'required',
+            ]); 
+
+            $parque = new Parque($request->input()) ;
+            
+            if($file = $request->hasFile('parque_logo')) {
+            
+                $file = $request->file('parque_logo') ;
+                
+                $fileName = $file->getClientOriginalName() ;
+                $destinationPath = public_path().'/images_upload/parques' ;
+                $file->move($destinationPath,$fileName);
+                $parque->parque_logo = $fileName ;
+            }
+
+            $parque->save();
+            return redirect()->route('parques.index')->with('successo', 'Adicionou uma Nova Seguadora!')->with('parque_logo');
     }
 
     /**
@@ -57,7 +77,7 @@ class ParqueController extends Controller
      */
     public function edit(Parque $parque)
     {
-        //
+        return view('admin.parques.edit',  compact('parque'));
     }
 
     /**
@@ -69,7 +89,23 @@ class ParqueController extends Controller
      */
     public function update(Request $request, Parque $parque)
     {
-        //
+        $request->validate([
+            'parque_nome'=>'required', 'parque_logo'=> 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'parque_email'=>'required','parque_contacto'=>'required',
+        ]);
+
+        if($file = $request->hasFile('parque_logo')) {
+            
+            $file = $request->file('parque_logo') ;
+            
+            $fileName = $file->getClientOriginalName() ;
+            $destinationPath = public_path().'/images_upload/parques' ;
+            $file->move($destinationPath,$fileName);
+            $parque->parque_logo = $fileName ;
+        }
+
+        $parque->update($request->all());
+        return redirect()->route('parques.index') ->with('successo','Actualizou o nome da Parque!');
     }
 
     /**
@@ -80,6 +116,7 @@ class ParqueController extends Controller
      */
     public function destroy(Parque $parque)
     {
-        //
+        $parque->delete();
+        return redirect()->route('parques.index')->with('success', 'Parque Removida!');
     }
 }

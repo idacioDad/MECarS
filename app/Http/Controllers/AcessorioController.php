@@ -14,7 +14,9 @@ class AcessorioController extends Controller
      */
     public function index()
     {
-        //
+        $acessorios = Acessorio::all();
+
+        return view('admin.acessorios.index')->with(compact('acessorios'));
     }
 
     /**
@@ -24,7 +26,7 @@ class AcessorioController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.acessorios.create');
     }
 
     /**
@@ -35,7 +37,11 @@ class AcessorioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([   
+            'acessorio_nome'=>'required',
+            ]);       
+            Acessorio::create($request->all());
+            return redirect()->route('acessorios.index')->with('successo', 'Adicionou um Novo Acessorio!');
     }
 
     /**
@@ -57,7 +63,7 @@ class AcessorioController extends Controller
      */
     public function edit(Acessorio $acessorio)
     {
-        //
+        return view('admin.acessorios.edit',  compact('acessorio'));
     }
 
     /**
@@ -69,7 +75,12 @@ class AcessorioController extends Controller
      */
     public function update(Request $request, Acessorio $acessorio)
     {
-        //
+        $request->validate([
+            'acessorio_nome' => 'required',
+        ]);
+
+        $acessorio->update($request->all());
+        return redirect()->route('acessorios.index') ->with('successo','Actualizou o nome do acessorio!');
     }
 
     /**
@@ -80,6 +91,7 @@ class AcessorioController extends Controller
      */
     public function destroy(Acessorio $acessorio)
     {
-        //
+        $acessorio->delete();
+        return redirect()->route('acessorios.index')->with('success', 'Acessorio Removido!');
     }
 }

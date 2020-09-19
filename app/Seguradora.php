@@ -9,7 +9,7 @@ class Seguradora extends Model
 
     protected $primaryKey = 'seguradora_id';
     protected $fillable = [
-        'id_fabricante','seguradora_nome','seguradora_logo', 'seguradora_email','seguradora_contacto'       
+        'seguradora_nome','seguradora_logo', 'seguradora_email','seguradora_contacto'       
     ];
 
     function documentos() {

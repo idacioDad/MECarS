@@ -14,7 +14,9 @@ class SeguradoraController extends Controller
      */
     public function index()
     {
-        //
+        $seguradoras = Seguradora::all();
+
+        return view('admin.seguradoras.index')->with(compact('seguradoras'));
     }
 
     /**
@@ -24,7 +26,8 @@ class SeguradoraController extends Controller
      */
     public function create()
     {
-        //
+        
+        return view('admin.seguradoras.create');
     }
 
     /**
@@ -35,7 +38,25 @@ class SeguradoraController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([   
+            'seguradora_nome'=>'required', 'seguradora_logo'=> 'required|image|max:2048',
+            'seguradora_email'=>'required','seguradora_contacto'=>'required',
+            ]); 
+
+            $seguradora = new Seguradora($request->input()) ;
+            
+            if($file = $request->hasFile('seguradora_logo')) {
+            
+                $file = $request->file('seguradora_logo') ;
+                
+                $fileName = $file->getClientOriginalName() ;
+                $destinationPath = public_path().'/images_upload/seguradoras' ;
+                $file->move($destinationPath,$fileName);
+                $seguradora->seguradora_logo = $fileName ;
+            }
+
+            $seguradora->save();
+            return redirect()->route('seguradoras.index')->with('successo', 'Adicionou uma Nova Seguadora!')->with('seguradora_logo');
     }
 
     /**
@@ -57,7 +78,7 @@ class SeguradoraController extends Controller
      */
     public function edit(Seguradora $seguradora)
     {
-        //
+        return view('admin.seguradoras.edit',  compact('seguradora'));
     }
 
     /**
@@ -69,7 +90,23 @@ class SeguradoraController extends Controller
      */
     public function update(Request $request, Seguradora $seguradora)
     {
-        //
+        $request->validate([
+            'seguradora_nome'=>'required', 'seguradora_logo'=> 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'seguradora_email'=>'required','seguradora_contacto'=>'required',
+        ]);
+
+        if($file = $request->hasFile('seguradora_logo')) {
+            
+            $file = $request->file('seguradora_logo') ;
+            
+            $fileName = $file->getClientOriginalName() ;
+            $destinationPath = public_path().'/images_upload/seguradoras' ;
+            $file->move($destinationPath,$fileName);
+            $seguradora->seguradora_logo = $fileName ;
+        }
+
+        $seguradora->update($request->all());
+        return redirect()->route('seguradoras.index') ->with('successo','Actualizou o nome da Parque!');
     }
 
     /**
@@ -80,6 +117,7 @@ class SeguradoraController extends Controller
      */
     public function destroy(Seguradora $seguradora)
     {
-        //
+        $seguradora->delete();
+        return redirect()->route('seguradoras.index')->with('success', 'Seguradora Removida!');
     }
 }

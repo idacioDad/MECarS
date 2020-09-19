@@ -54,6 +54,9 @@ Route::get('/admin/index', function () {
     return view('admin.index');
 });
 
+//Acessorios
+Route::resource('admin/acessorios','AcessorioController');
+
 //Categorias
 Route::resource('admin/categorias','CategoriaController');
 
@@ -65,6 +68,12 @@ Route::resource('admin/fabricantes','FabricanteController');
 
 //Seguradoras
 Route::resource('admin/seguradoras','SeguradoraController');
+
+//Parques
+Route::resource('admin/parques','ParqueController');
+
+//Trackers
+Route::resource('admin/trackers','TrackerController');
 
 
 
