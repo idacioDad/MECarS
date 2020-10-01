@@ -16,4 +16,8 @@ class Tracker extends Model
         return $this->hasMany('App\Documento','seguradora_id','documento_id');
     }
 
+    function endereco() {
+        return $this->hasOne('App\Endereco','id_tracker','tracker_id');
+    }
+
 }

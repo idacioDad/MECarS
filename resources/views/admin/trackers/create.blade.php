@@ -56,8 +56,23 @@
                                     
 
                                     <div class="col-md-12 form-group mb-3">
-                                        <label for="tracker_contacto">Contacto do tracker</label>
+                                        <label for="tracker_contacto">Contacto da tracker</label>
                                         <input type="text" class="form-control form-control-rounded" name="tracker_contacto" id="tracker_contacto" placeholder="Digite o contacto da tracker" required="true">
+                                    </div>
+
+                                    <div class="col-md-12 form-group mb-3">
+                                        <label for="ender_provincia">Provincia</label>
+                                        <input type="text" class="form-control form-control-rounded" name="ender_provincia" id="ender_provincia" placeholder="Provincia da tracker" required="true">
+                                    </div>
+
+                                    <div class="col-md-12 form-group mb-3">
+                                        <label for="ender_distrito">Distrito</label>
+                                        <input type="text" class="form-control form-control-rounded" name="ender_distrito" id="ender_distrito" placeholder="Distrito da tracker" required="true">
+                                    </div>
+                                   
+                                    <div class="col-md-12 form-group mb-3">
+                                        <label for="ender_avenida">Avenidida/Rua</label>
+                                        <input type="text" class="form-control form-control-rounded" name="ender_avenida" id="ender_avenida" placeholder="Avenida da tracker" required="true">
                                     </div>
                                    
 

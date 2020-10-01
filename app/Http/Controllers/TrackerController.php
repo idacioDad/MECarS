@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Tracker;
+use App\Endereco;
 use Illuminate\Http\Request;
 
 class TrackerController extends Controller
@@ -15,7 +16,6 @@ class TrackerController extends Controller
     public function index()
     {
         $trackers = Tracker::all();
-
         return view('admin.trackers.index')->with(compact('trackers'));
     }
 
@@ -26,6 +26,8 @@ class TrackerController extends Controller
      */
     public function create()
     {
+        $trackers = Tracker::with('endereco')->get();
+        //$endereco = Endereco::with('tracker')->get();
         return view('admin.trackers.create');
     }
 
@@ -54,8 +56,19 @@ class TrackerController extends Controller
                 $tracker->tracker_logo = $fileName ;
             }
 
+            $tracker->tracker_email=$request->get('tracker_email');
+            $tracker->tracker_contacto=$request->get('tracker_contacto');
             $tracker->save();
-            return redirect()->route('trackers.index')->with('successo', 'Adicionou uma Nova Seguadora!')->with('tracker_logo');
+            $tracker_id=$tracker->tracker_id;
+
+            $endereco= new Endereco();
+            $endereco->ender_provincia=$request->get('ender_provincia');
+            $endereco->distrito_cidade=$request->get('ender_distrito');
+            $endereco->ender_rua_Av=$request->get('ender_avenida');
+            $endereco->id_tracker= $tracker_id;
+            $endereco->save();
+
+            return redirect()->route('trackers.index')->with('successo', 'Adicionou uma Nova Rracker!')->with('tracker_logo');
     }
 
     /**
@@ -77,7 +90,9 @@ class TrackerController extends Controller
      */
     public function edit(Tracker $tracker)
     {
-        return view('admin.trackers.edit',  compact('tracker'));
+        $trackers = Tracker::with('endereco')->get();
+        $endereco = Endereco::all();
+        return view('admin.trackers.edit',  compact('tracker','trackers'));
     }
 
     /**
@@ -105,8 +120,21 @@ class TrackerController extends Controller
             $tracker->tracker_logo = $fileName ;
         }
 
-        $tracker->update($request->all());
-        return redirect()->route('trackers.index') ->with('successo','Actualizou o nome da Tracker!');
+        $tracker->tracker_email=$request->get('tracker_email');
+        $tracker->tracker_contacto=$request->get('tracker_contacto');
+        $tracker->push();
+        $tracker_id=$tracker->tracker_id;
+
+        $endereco = new Endereco();
+        $endereco= Tracker::find('1')->endereco;
+            $endereco->ender_provincia=$request->get('ender_provincia');
+            $endereco->distrito_cidade=$request->get('ender_distrito');
+            $endereco->ender_rua_Av=$request->get('ender_avenida');
+            $endereco->id_tracker= $tracker_id;
+            $endereco->push();
+
+       /// $tracker->update($request->all());
+        return redirect()->route('trackers.index') ->with('successo','Actualizou o nome da Parque!');
 
     }
 

@@ -15,4 +15,8 @@ class Parque extends Model
     function carros() {
         return $this->hasMany('App\Carro','parque_id','carro_id');
     }
+
+    function endereco() {
+        return $this->hasOne('App\Endereco','id_parque','parque_id');
+    }
 }

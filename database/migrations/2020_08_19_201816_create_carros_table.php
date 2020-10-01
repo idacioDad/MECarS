@@ -25,6 +25,19 @@ class CreateCarrosTable extends Migration
             $table->integer('carro_ano_fabrico');
             $table->float('carrro_Km');
             $table->string('carro_foto')->nullable();
+            $table->string('carro_motorSize');
+            $table->string('carro_motorCode');
+            $table->string('carro_conducao');
+            $table->string('carro_caixa');
+            $table->string('carro_versao/Classe');
+            $table->string('carro_volante');
+            $table->string('carro_corExterna');
+            $table->string('carro_combustivel');
+            $table->float('carro_assentos');
+            $table->float('carro_portas');
+            $table->float('carro_peso');
+            $table->float('carro_lotacao');
+
            
         });
     }

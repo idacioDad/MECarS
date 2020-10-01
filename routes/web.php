@@ -60,6 +60,12 @@ Route::resource('admin/acessorios','AcessorioController');
 //Categorias
 Route::resource('admin/categorias','CategoriaController');
 
+//Carros
+Route::resource('admin/carros','CarroController');
+
+//Documentos
+Route::resource('admin/documentos','DocumentoController');
+
 //modelos
 Route::resource('admin/modelos','ModeloController');
 

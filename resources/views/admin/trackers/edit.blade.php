@@ -60,6 +60,21 @@
                                         <label for="tracker_contacto">Contacto do tracker</label>
                                         <input type="text" class="form-control form-control-rounded" name="tracker_contacto" id="tracker_contacto" value="{{ $tracker->tracker_contacto }}" placeholder="Digite o contacto da tracker" required="true">
                                     </div>
+
+                                    <div class="col-md-12 form-group mb-3">
+                                        <label for="ender_provincia">Provincia</label>
+                                        <input type="text" class="form-control form-control-rounded" name="ender_provincia" id="ender_provincia" value="{{ $seguradora->endereco->ender_provincia }}" placeholder="Provincia da tracker" required="true">
+                                    </div>
+
+                                    <div class="col-md-12 form-group mb-3">
+                                        <label for="ender_distrito">Distrito</label>
+                                        <input type="text" class="form-control form-control-rounded" name="ender_distrito" id="ender_distrito" value="{{ $seguradora->endereco->distrito_cidade }}" placeholder="Distrito da tracker" required="true">
+                                    </div>
+                                   
+                                    <div class="col-md-12 form-group mb-3">
+                                        <label for="ender_avenida">Avenidida/Rua</label>
+                                        <input type="text" class="form-control form-control-rounded" name="ender_avenida" id="ender_avenida" value="{{ $seguradora->endereco->ender_rua_Av }}" placeholder="Avenida da tracker" required="true">
+                                    </div>
                                    
 
                                    

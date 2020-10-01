@@ -59,7 +59,21 @@
                                         <label for="seguradora_contacto">Contacto do seguradora</label>
                                         <input type="text" class="form-control form-control-rounded" name="seguradora_contacto" id="seguradora_contacto" placeholder="Digite o contacto da seguradora" required="true">
                                     </div>
+
+                                    <div class="col-md-12 form-group mb-3">
+                                        <label for="ender_provincia">Provincia</label>
+                                        <input type="text" class="form-control form-control-rounded" name="ender_provincia" id="ender_provincia" placeholder="Provincia da seguradora" required="true">
+                                    </div>
+
+                                    <div class="col-md-12 form-group mb-3">
+                                        <label for="ender_distrito">Distrito</label>
+                                        <input type="text" class="form-control form-control-rounded" name="ender_distrito" id="ender_distrito" placeholder="Distrito da seguradora" required="true">
+                                    </div>
                                    
+                                    <div class="col-md-12 form-group mb-3">
+                                        <label for="ender_avenida">Avenidida/Rua</label>
+                                        <input type="text" class="form-control form-control-rounded" name="ender_avenida" id="ender_avenida" placeholder="Avenida da seguradora" required="true">
+                                    </div>
 
                                     <div class="col-md-6">
                                          <button class="btn btn-primary">Adicionar</button>

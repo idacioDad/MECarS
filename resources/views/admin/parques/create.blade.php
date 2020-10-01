@@ -60,6 +60,20 @@
                                         <input type="text" class="form-control form-control-rounded" name="parque_contacto" id="parque_contacto" placeholder="Digite o contacto do parque" required="true">
                                     </div>
                                    
+                                    <div class="col-md-12 form-group mb-3">
+                                        <label for="ender_provincia">Provincia</label>
+                                        <input type="text" class="form-control form-control-rounded" name="ender_provincia" id="ender_provincia" placeholder="Provincia do Parque" required="true">
+                                    </div>
+
+                                    <div class="col-md-12 form-group mb-3">
+                                        <label for="ender_distrito">Distrito</label>
+                                        <input type="text" class="form-control form-control-rounded" name="ender_distrito" id="ender_distrito" placeholder="Distrito do Parque" required="true">
+                                    </div>
+                                   
+                                    <div class="col-md-12 form-group mb-3">
+                                        <label for="ender_avenida">Avenidida/Rua</label>
+                                        <input type="text" class="form-control form-control-rounded" name="ender_avenida" id="ender_avenida" placeholder="Avenida do Parque" required="true">
+                                    </div>
 
                                     <div class="col-md-6">
                                          <button class="btn btn-primary">Adicionar</button>

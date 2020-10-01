@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Seguradora;
+use App\Endereco;
 use Illuminate\Http\Request;
 
 class SeguradoraController extends Controller
@@ -26,7 +27,8 @@ class SeguradoraController extends Controller
      */
     public function create()
     {
-        
+        $seguradoras = Seguradora::with('endereco')->get();
+        //$endereco = Endereco::with('seguradora')->get();
         return view('admin.seguradoras.create');
     }
 
@@ -40,10 +42,13 @@ class SeguradoraController extends Controller
     {
         $request->validate([   
             'seguradora_nome'=>'required', 'seguradora_logo'=> 'required|image|max:2048',
-            'seguradora_email'=>'required','seguradora_contacto'=>'required',
+            'seguradora_email'=>'required','seguradora_contacto'=>'required','ender_provincia'=>'required',
+            'ender_distrito'=>'required','ender_avenida'=>'required',
             ]); 
 
-            $seguradora = new Seguradora($request->input()) ;
+            $seguradora = new Seguradora() ;
+            $seguradora->seguradora_nome=$request->get('seguradora_nome');
+           
             
             if($file = $request->hasFile('seguradora_logo')) {
             
@@ -55,7 +60,18 @@ class SeguradoraController extends Controller
                 $seguradora->seguradora_logo = $fileName ;
             }
 
+            $seguradora->seguradora_email=$request->get('seguradora_email');
+            $seguradora->seguradora_contacto=$request->get('seguradora_contacto');
             $seguradora->save();
+            $seguradora_id=$seguradora->seguradora_id;
+
+            $endereco= new Endereco();
+            $endereco->ender_provincia=$request->get('ender_provincia');
+            $endereco->distrito_cidade=$request->get('ender_distrito');
+            $endereco->ender_rua_Av=$request->get('ender_avenida');
+            $endereco->id_seguradora= $seguradora_id;
+            $endereco->save();
+
             return redirect()->route('seguradoras.index')->with('successo', 'Adicionou uma Nova Seguadora!')->with('seguradora_logo');
     }
 
@@ -78,7 +94,9 @@ class SeguradoraController extends Controller
      */
     public function edit(Seguradora $seguradora)
     {
-        return view('admin.seguradoras.edit',  compact('seguradora'));
+        $seguradoras = Seguradora::with('endereco')->get();
+        $endereco = Endereco::all();
+        return view('admin.seguradoras.edit',  compact('seguradora','seguradoras'));
     }
 
     /**
@@ -95,6 +113,7 @@ class SeguradoraController extends Controller
             'seguradora_email'=>'required','seguradora_contacto'=>'required',
         ]);
 
+        $seguradora->seguradora_nome=$request->get('seguradora_nome');
         if($file = $request->hasFile('seguradora_logo')) {
             
             $file = $request->file('seguradora_logo') ;
@@ -105,7 +124,20 @@ class SeguradoraController extends Controller
             $seguradora->seguradora_logo = $fileName ;
         }
 
-        $seguradora->update($request->all());
+        $seguradora->seguradora_email=$request->get('seguradora_email');
+        $seguradora->seguradora_contacto=$request->get('seguradora_contacto');
+        $seguradora->push();
+        $seguradora_id=$seguradora->seguradora_id;
+
+        $endereco = new Endereco();
+        $endereco= Seguradora::find('1')->endereco;
+            $endereco->ender_provincia=$request->get('ender_provincia');
+            $endereco->distrito_cidade=$request->get('ender_distrito');
+            $endereco->ender_rua_Av=$request->get('ender_avenida');
+            //$endereco->id_seguradora= $seguradora_id;
+            $endereco->push();
+
+       /// $seguradora->update($request->all());
         return redirect()->route('seguradoras.index') ->with('successo','Actualizou o nome da Parque!');
     }
 

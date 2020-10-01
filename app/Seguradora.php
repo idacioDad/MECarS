@@ -13,6 +13,10 @@ class Seguradora extends Model
     ];
 
     function documentos() {
-        return $this->hasMany('App\Documento','seguradora_id','documento_id');
+        return $this->hasMany('App\Documento','documento_id','documento_id');
+    }
+
+    function endereco() {
+        return $this->hasOne('App\Endereco','id_seguradora','seguradora_id');
     }
 }

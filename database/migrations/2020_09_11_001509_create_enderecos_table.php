@@ -24,7 +24,7 @@ class CreateEnderecosTable extends Migration
             $table->unsignedBigInteger('id_user');
             $table->foreign('id_user')->references('id')->on('users');
             $table->string('ender_provincia');
-            $table->string('distrito/cidade');
+            $table->string('distrito_cidade');
             $table->string('ender_rua_Av');
             $table->timestamps();
         });

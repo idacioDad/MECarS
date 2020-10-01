@@ -60,6 +60,21 @@
                                         <label for="parque_contacto">Contacto do parque</label>
                                         <input type="text" class="form-control form-control-rounded" name="parque_contacto" id="parque_contacto" value="{{ $parque->parque_contacto }}" placeholder="Digite o contacto do parque" required="true">
                                     </div>
+
+                                    <div class="col-md-12 form-group mb-3">
+                                        <label for="ender_provincia">Provincia</label>
+                                        <input type="text" class="form-control form-control-rounded" name="ender_provincia" id="ender_provincia" value="{{ $seguradora->endereco->ender_provincia }}" placeholder="Provincia do parque" required="true">
+                                    </div>
+
+                                    <div class="col-md-12 form-group mb-3">
+                                        <label for="ender_distrito">Distrito</label>
+                                        <input type="text" class="form-control form-control-rounded" name="ender_distrito" id="ender_distrito" value="{{ $seguradora->endereco->distrito_cidade }}" placeholder="Distrito do parque" required="true">
+                                    </div>
+                                   
+                                    <div class="col-md-12 form-group mb-3">
+                                        <label for="ender_avenida">Avenidida/Rua</label>
+                                        <input type="text" class="form-control form-control-rounded" name="ender_avenida" id="ender_avenida" value="{{ $seguradora->endereco->ender_rua_Av }}" placeholder="Avenida do parque" required="true">
+                                    </div>
                                    
 
                                    

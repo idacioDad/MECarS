@@ -2,7 +2,7 @@
 
 @section('content')
 
-<li><a href="#">Parques de Viaturas</a></li>
+<li><a href="#">Documentos</a></li>
                     
                     </ul>
                 </div>
@@ -18,8 +18,8 @@
   @endif
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Lista de Parques</h3>
-            <a href="{{url('admin/parques/create')}}" style="max-width: 150px; float:right; display:inline;" class="btn btn-block btn-success">Adicionar Parques</a>
+            <h3 class="card-title">Lista de Documentos</h3>
+            <a href="{{url('admin/documentos/create')}}" style="max-width: 150px; float:right; display:inline;" class="btn btn-block btn-success">Adicionar Documento</a>
         </div>
         <div class="card-body">
         <div class="">
@@ -28,32 +28,33 @@
                                             <thead>
                                                 <tr>
                                                     <th scope="col">Id</th>
-                                                    <th scope="col">Logo</th>
-                                                    <th scope="col">Nome do Parque</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Contacto</th>
-                                                    <th scope="col">Província</th>
-                                                    <th scope="col">Cidade/Distrito</th>
-                                                    <th scope="col">Avenida/Rua</th>
+                                                    <th scope="col">Nome do Documento</th>
+                                                    <th scope="col">Instituição</th>
+                                                    <th scope="col">Descrição</th>
                                                     <th scope="col">Acção</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                            @foreach($parques as $parque)
+                                            @foreach($documentos as $documento)
                                                 <tr>
-                                                    <th scope="row">{{ $parque->parque_id }}</th>
-                                                    <td><img src="{{asset ('images_upload/$parque-> parque_logo') }}"></td>
-                                                    <td>{{ $parque-> parque_nome }}</td>
-                                                    <td>{{ $parque-> parque_email }}</td>
-                                                    <td>{{ $parque-> parque_contacto }}</td>
-                                                    <td>{{ $parque-> endereco-> ender_provincia  }}</td>
-                                                    <td>{{ $parque-> endereco-> distrito_cidade }}</td>
-                                                    <td>{{ $parque-> endereco-> ender_rua_Av }}</td>
+                                                    <th scope="row">{{ $documento->documento_id }}</th>
+                                                    <th scope="row">{{ $documento->documento_nome }}</th>
+                                                    @if (isset($documento->seguradoras->seguradora_nome ))
+                                                    <td>{{ $documento->seguradoras->seguradora_nome }}</td>
+                                                    @elseif(isset($documento->parques->parque_nome ))
+                                                    <td>{{ $documento->parques->parque_nome }}</td>
+                                                    @elseid(isset($documento->trackrs->tracker_nome))
+                                                    <td>{{ $documento->trackrs->tracker_nome }}</td>
+                                                    @else
+                                                    <td></td>
+                                                    @endif
+                                                    <th scope="row">{{ $documento->documento_descr }}</th>
+                                                  
                                                     <td>
-                                                        <a href="{{ route('parques.edit',$parque->parque_id) }}" class="text-success mr-2">
+                                                        <a href="{{ route('documentos.edit',$documento->documento_id) }}" class="text-success mr-2">
                                                             <i class="nav-icon i-Pen-2 font-weight-bold"></i>
                                                         </a>
-                                                        <a><form action="{{ route('parques.destroy',$parque->parque_id) }}" method="POST" class="text-danger mr-2">
+                                                        <a><form action="{{ route('documentos.destroy',$documento->documento_id) }}" method="POST" class="text-danger mr-2">
                                                         @csrf
                                                         @method('DELETE')
                                                            <i > <button class="nav-icon i-Close-Window font-weight-bold" type="submit"></button></i></form>

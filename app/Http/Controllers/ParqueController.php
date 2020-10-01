@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Parque;
+use App\Endereco;
 use Illuminate\Http\Request;
 
 class ParqueController extends Controller
@@ -15,7 +16,6 @@ class ParqueController extends Controller
     public function index()
     {
         $parques = Parque::all();
-
         return view('admin.parques.index')->with(compact('parques'));
     }
 
@@ -26,6 +26,8 @@ class ParqueController extends Controller
      */
     public function create()
     {
+        $parques = Parque::with('endereco')->get();
+        //$endereco = Endereco::with('parque')->get();
         return view('admin.parques.create');
     }
 
@@ -54,8 +56,19 @@ class ParqueController extends Controller
                 $parque->parque_logo = $fileName ;
             }
 
+            $parque->parque_email=$request->get('parque_email');
+            $parque->parque_contacto=$request->get('parque_contacto');
             $parque->save();
-            return redirect()->route('parques.index')->with('successo', 'Adicionou uma Nova Seguadora!')->with('parque_logo');
+            $parque_id=$parque->parque_id;
+
+            $endereco= new Endereco();
+            $endereco->ender_provincia=$request->get('ender_provincia');
+            $endereco->distrito_cidade=$request->get('ender_distrito');
+            $endereco->ender_rua_Av=$request->get('ender_avenida');
+            $endereco->id_parque= $parque_id;
+            $endereco->save();
+
+            return redirect()->route('parques.index')->with('successo', 'Adicionou um Novo Parque!')->with('parque_logo');
     }
 
     /**
@@ -77,7 +90,9 @@ class ParqueController extends Controller
      */
     public function edit(Parque $parque)
     {
-        return view('admin.parques.edit',  compact('parque'));
+        $parques = Parque::with('endereco')->get();
+        $endereco = Endereco::all();
+        return view('admin.parques.edit',  compact('parque','parques'));
     }
 
     /**
@@ -104,8 +119,21 @@ class ParqueController extends Controller
             $parque->parque_logo = $fileName ;
         }
 
-        $parque->update($request->all());
-        return redirect()->route('parques.index') ->with('successo','Actualizou o nome da Parque!');
+        $parque->parque_email=$request->get('parque_email');
+        $parque->parque_contacto=$request->get('parque_contacto');
+        $parque->push();
+        $parque_id=$parque->parque_id;
+
+        $endereco = new Endereco();
+        $endereco= Parque::find('1')->endereco;
+            $endereco->ender_provincia=$request->get('ender_provincia');
+            $endereco->distrito_cidade=$request->get('ender_distrito');
+            $endereco->ender_rua_Av=$request->get('ender_avenida');
+            $endereco->id_parque= $parque_id;
+            $endereco->push();
+
+       /// $parque->update($request->all());
+        return redirect()->route('parques.index') ->with('successo','Actualizou o nome do Parque!');
     }
 
     /**

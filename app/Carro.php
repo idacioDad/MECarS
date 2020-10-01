@@ -6,6 +6,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Carro extends Model
 {
+
+    protected $primaryKey = 'carro_id';
+    protected $fillable = [
+        'id_parque','id_modelo','id_categoria','carro_preco',
+        'carro_ano_fabrico','carro_Km','carro_foto',
+        'carro_motorSize','carro_motorCode','carro_conducao',
+        'carro_caixa','carro_versaoClasse','carro_volante',
+        'carro_corExterna','carro_combustivel','carro_assentos',
+        'carro_portas','carro_peso','carro_lotacao','car_foto[]'      
+    ];
+
     function acessorio() {
         return $this->belongsToMany('App\Acessorio', 'acessorio_carros','carro_id','acessorio_id');
     }
@@ -20,6 +31,10 @@ class Carro extends Model
 
     function parque() {
         return $this->belongsTo('App\Parque', 'id_parque','parque_id');
+    }
+
+    function photos() {
+        return $this->hasMany('App\CarPhoto', 'id_carphoto','carphoto_id');
     }
 
 }

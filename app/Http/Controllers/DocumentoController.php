@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Documento;
+use App\Seguradora;
+use App\Parque;
+use App\Tracker;
 use Illuminate\Http\Request;
 
 class DocumentoController extends Controller
@@ -14,7 +17,9 @@ class DocumentoController extends Controller
      */
     public function index()
     {
-        //
+        $documentos = Documento::with('seguradoras','parques','trackers')->get();
+        
+        return view('admin.documentos.index')->with(compact('documentos'));
     }
 
     /**
@@ -24,7 +29,10 @@ class DocumentoController extends Controller
      */
     public function create()
     {
-        //
+        $seguradoras = Seguradora::all(['seguradora_id', 'seguradora_nome']);
+        $trackers = Tracker::all(['tracker_id', 'tracker_nome']);
+        $parques = Parque::all(['parque_id', 'parque_nome']);
+        return view('admin.documentos.create', compact('seguradoras','trackers','parques'))->with(['seguradoras'=> $seguradoras], ['trackers'=> $trackers],['parques'=> $parques]);
     }
 
     /**
@@ -35,7 +43,13 @@ class DocumentoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([   
+            'documento_nome'=>'required',
+            'documento_descr'=>'required',
+
+            ]);       
+            Documento::create($request->all());
+            return redirect()->route('documentos.index')->with('successo', 'Adicionou um Novo Documento!');
     }
 
     /**
@@ -57,7 +71,11 @@ class DocumentoController extends Controller
      */
     public function edit(Documento $documento)
     {
-        //
+        $documentos = Documentos::with('seguradoras','parques','trackers')->get();
+        $seguradoras = Seguradora::all(['seguradora_id', 'seguradora_nome']);
+        $trackers = Tracker::all(['tracker_id', 'tracker_nome']);
+        $parques = Parque::all(['parque_id', 'parque_nome']);
+        return view('admin.documentos.edit')->with(compact('documentos','documento'));
     }
 
     /**
@@ -69,7 +87,16 @@ class DocumentoController extends Controller
      */
     public function update(Request $request, Documento $documento)
     {
-        //
+        $request->validate([   
+            'documento_nome'=>'required',
+            'id_seguradora'=>'required',
+            'id_parque'=>'required',
+            'id_tracker'=>'required',
+            'documento_decr'=>'required',
+
+            ]); 
+
+            return redirect()->route('documentos.index') ->with('successo','Actualizou o  Documento!');
     }
 
     /**
@@ -80,6 +107,7 @@ class DocumentoController extends Controller
      */
     public function destroy(Documento $documento)
     {
-        //
+        $documento->delete();
+        return redirect()->route('documentos.index')->with('successo', 'Documento Removido!');
     }
 }

@@ -32,6 +32,9 @@
                                                     <th scope="col">Nome da Seguradora</th>
                                                     <th scope="col">Email</th>
                                                     <th scope="col">Contacto</th>
+                                                    <th scope="col">Província</th>
+                                                    <th scope="col">Cidade/Distrito</th>
+                                                    <th scope="col">Avenida/Rua</th>
                                                     <th scope="col">Acção</th>
                                                 </tr>
                                             </thead>
@@ -39,10 +42,14 @@
                                             @foreach($seguradoras as $seguradora)
                                                 <tr>
                                                     <th scope="row">{{ $seguradora->seguradora_id }}</th>
-                                                    <td><img src="{{asset ('images_upload/$seguradora-> seguradora_logo') }}"></td>
+                                                    <td><img src="{{asset ('images_upload/seguradoras/$seguradora-> seguradora_logo') }}"></td>
                                                     <td>{{ $seguradora-> seguradora_nome }}</td>
                                                     <td>{{ $seguradora-> seguradora_email }}</td>
                                                     <td>{{ $seguradora-> seguradora_contacto }}</td>
+                                                    <td>{{ $seguradora-> seguradora_contacto }}</td>
+                                                    <td>{{ $seguradora->endereco->ender_provincia  }}</td>
+                                                    <td>{{ $seguradora->endereco->distrito_cidade }}</td>
+                                                    <td>{{ $seguradora->endereco->ender_rua_Av }}</td>
                                                     <td>
                                                         <a href="{{ route('seguradoras.edit',$seguradora->seguradora_id) }}" class="text-success mr-2">
                                                             <i class="nav-icon i-Pen-2 font-weight-bold"></i>
