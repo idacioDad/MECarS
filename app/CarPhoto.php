@@ -9,7 +9,12 @@ class CarPhoto extends Model
 
     protected $primaryKey = 'carphoto_id';
 
-    function carro() {
+    protected $fillable = [
+        'id_carro','car_foto'      
+    ];
+
+
+    function carros() {
         return $this->belongsTo('App\Carro', 'id_carro','carro_id');
     }
 }

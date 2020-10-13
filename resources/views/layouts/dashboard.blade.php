@@ -47,55 +47,78 @@
                 </a>
                 <div class="triangle"></div>
             </li>
-            <li class="nav-item " data-item="uikits">
-                <a class="nav-item-hold" href="#">
-                    <i class="nav-icon i-Library"></i>
-                    <span class="nav-text">UI kits</span>
-                </a>
-                <div class="triangle"></div>
-            </li>
-            <li class="nav-item " data-item="extrakits">
-                <a class="nav-item-hold" href="#">
-                    <i class="nav-icon i-Suitcase"></i>
-                    <span class="nav-text">Extra kits</span>
-                </a>
-                <div class="triangle"></div>
-            </li>
-            <li class="nav-item " data-item="apps">
+            
+            <li class="nav-item " data-item="acessorios">
                 <a class="nav-item-hold" href="#">
                     <i class="nav-icon i-Computer-Secure"></i>
-                    <span class="nav-text">Apps</span>
+                    <span class="nav-text">Acessorios</span>
                 </a>
                 <div class="triangle"></div>
             </li>
 
 
-            <li class="nav-item " data-item="forms">
+            <li class="nav-item " data-item="carros">
                 <a class="nav-item-hold" href="#">
                     <i class="nav-icon i-File-Clipboard-File--Text"></i>
-                    <span class="nav-text">Forms</span>
+                    <span class="nav-text">Carros</span>
                 </a>
                 <div class="triangle"></div>
             </li>
 
-            <li class="nav-item " data-item="charts">
+            <li class="nav-item " data-item="documentos">
                 <a class="nav-item-hold" href="#">
                     <i class="nav-icon i-Bar-Chart-5"></i>
-                    <span class="nav-text">Charts</span>
+                    <span class="nav-text">Documentos</span>
                 </a>
                 <div class="triangle"></div>
             </li>
 
 
-            <li class="nav-item ">
-                <a class="nav-item-hold" href="http://gull-html-laravel.ui-lib.com/datatables/basic-tables">
-                    <i class="nav-icon i-File-Horizontal-Text"></i>
-                    <span class="nav-text">Datatables</span>
+            <li class="nav-item " data-item="fabricantes">
+                <a class="nav-item-hold" href="#">
+                    <i class="nav-icon i-Bar-Chart-5"></i>
+                    <span class="nav-text">Fabricantes</span>
+                </a>
+                <div class="triangle"></div>
+            </li>
+
+            
+            <li class="nav-item " data-item="modelos">
+                <a class="nav-item-hold" href="#">
+                    <i class="nav-icon i-Bar-Chart-5"></i>
+                    <span class="nav-text">Modelos</span>
+                </a>
+                <div class="triangle"></div>
+            </li>
+
+
+            <li class="nav-item " data-item="parques">
+                <a class="nav-item-hold" href="#">
+                    <i class="nav-icon i-Bar-Chart-5"></i>
+                    <span class="nav-text">Parques</span>
+                </a>
+                <div class="triangle"></div>
+            </li>
+
+
+            <li class="nav-item " data-item="seguradoras">
+                <a class="nav-item-hold" href="#">
+                    <i class="nav-icon i-Bar-Chart-5"></i>
+                    <span class="nav-text">Seguradoras</span>
+                </a>
+                <div class="triangle"></div>
+            </li>
+
+
+            <li class="nav-item " data-item="trackers">
+                <a class="nav-item-hold" href="#">
+                    <i class="nav-icon i-Bar-Chart-5"></i>
+                    <span class="nav-text">Trackers</span>
                 </a>
                 <div class="triangle"></div>
             </li>
             <li class="nav-item " data-item="sessions">
-                <a class="nav-item-hold" href="http://gull-html-laravel.ui-lib.com/test.html">
+                <a class="nav-item-hold" href="#">
                     <i class="nav-icon i-Administrator"></i>
                     <span class="nav-text">Sessions</span>
                 </a>
@@ -128,504 +151,227 @@
         <!-- Submenu Dashboards -->
         <div class="submenu-area" data-parent="dashboard">
             <header>
-                <h6>Dashboards</h6>
-                <p>Lorem ipsum dolor sit.</p>
+                <h6>Painel de Control</h6>
+                
             </header>
             <ul class="childNav" data-parent="dashboard">
                 <li class="nav-item ">
                     <a class=""
-                        href="http://gull-html-laravel.ui-lib.com/dashboard/dashboard1">
+                        href="{{url('admin/index')}}">
                         <i class="nav-icon i-Clock-3"></i>
-                        <span class="item-name">Version 1</span>
+                        <span class="item-name">Painel Administrativo</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="http://gull-html-laravel.ui-lib.com/dashboard/dashboard2"
-                        class="">
-                        <i class="nav-icon i-Clock-4"></i>
-                        <span class="item-name">Version 2</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class=""
-                        href="http://gull-html-laravel.ui-lib.com/dashboard/dashboard3">
-                        <i class="nav-icon i-Over-Time"></i>
-                        <span class="item-name">Version 3</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class=""
-                        href="http://gull-html-laravel.ui-lib.com/dashboard/dashboard4">
-                        <i class="nav-icon i-Clock"></i>
-                        <span class="item-name">Version 4</span>
-                    </a>
-                </li>
             </ul>
         </div>
-        <div class="submenu-area" data-parent="forms">
+
+        <div class="submenu-area" data-parent="acessorios">
             <header>
-                <h6>Forms</h6>
-                <p>Lorem ipsum dolor sit.</p>
+                <h6>Acessórios</h6>
+                <p>Administração de Acessórios</p>
             </header>
-            <ul class="childNav" data-parent="forms">
+            <ul class="childNav" data-parent="acessorios">
 
                 <li class="nav-item">
                     <a class=""
-                        href="http://gull-html-laravel.ui-lib.com/forms/forms-basic">
+                        href="{{url('admin/acessorios/index')}}">
                         <i class="nav-icon i-File-Clipboard-Text--Image"></i>
-                        <span class="item-name">Basic Elements</span>
+                        <span class="item-name">Lista de Acessórios</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a class=""
-                        href="http://gull-html-laravel.ui-lib.com/forms/basic-action-bar">
+                        href="{{url('admin/acessorios/create')}}">
                         <i class="nav-icon i-File-Clipboard-Text--Image"></i>
-                        <span class="item-name">Basic action bar </span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class=""
-                        href="http://gull-html-laravel.ui-lib.com/forms/form-layouts">
-                        <i class="nav-icon i-Split-Vertical"></i>
-                        <span class="item-name">Form Layouts</span>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class=""
-                        href="http://gull-html-laravel.ui-lib.com/forms/multi-column-forms">
-                        <i class="nav-icon i-Split-Vertical"></i>
-                        <span class="item-name">Multi column forms</span>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class=""
-                        href="http://gull-html-laravel.ui-lib.com/forms/form-input-group">
-                        <i class="nav-icon i-Receipt-4"></i>
-                        <span class="item-name">Input Groups</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class=""
-                        href="http://gull-html-laravel.ui-lib.com/forms/form-validation">
-                        <i class="nav-icon i-Close-Window"></i>
-                        <span class="item-name">Form Validation</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class=""
-                        href="http://gull-html-laravel.ui-lib.com/forms/smartWizard">
-                        <i class="nav-icon i-Width-Window"></i>
-                        <span class="item-name">Smart Wizard</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/forms/tagInput">
-                        <i class="nav-icon i-Tag-2"></i>
-                        <span class="item-name">Tag Input</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class=""
-                        href="http://gull-html-laravel.ui-lib.com/forms/form-editor">
-                        <i class="nav-icon i-Pen-2"></i>
-                        <span class="item-name">Rich Editor</span>
+                        <span class="item-name">Adicionar Acessório </span>
                     </a>
                 </li>
             </ul>
         </div>
 
-        <div class="submenu-area" data-parent="charts">
+        <div class="submenu-area" data-parent="carros">
             <header>
-                <h6>Charts</h6>
-                <p>Lists of useable charts</p>
+                <h6>Carros</h6>
+                <p>Administração de Carros</p>
             </header>
-            <ul class="childNav" data-parent="charts">
+            <ul class="childNav" data-parent="carros">
+
                 <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/charts/echarts"
-                        title='charts'>
-                        <i class="nav-icon i-Bar-Chart-2"></i>
-                        <span class="item-name">echarts</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/charts/chartjs">
+                    <a class=""
+                        href="{{url('admin/carros/index')}}">
                         <i class="nav-icon i-File-Clipboard-Text--Image"></i>
-                        <span class="item-name">ChartJs</span>
+                        <span class="item-name">Lista de Carros</span>
                     </a>
                 </li>
 
-
-
-                <li class="nav-item dropdown-sidemenu">
-                    <a>
+                <li class="nav-item">
+                    <a class=""
+                        href="{{url('admin/carros/create')}}">
                         <i class="nav-icon i-File-Clipboard-Text--Image"></i>
-                        <span class="item-name">Apex Charts</span>
-                        <i class="dd-arrow i-Arrow-Down"></i>
+                        <span class="item-name">Adicionar Carros </span>
                     </a>
-                    <ul class="submenu">
-                        <li><a class=""
-                                href="http://gull-html-laravel.ui-lib.com/charts/apexAreaCharts">Area Charts</a></li>
-                        <li><a class=""
-                                href="http://gull-html-laravel.ui-lib.com/charts/apexBarCharts">Bar Charts</a></li>
-                        <li><a class=""
-                                href="http://gull-html-laravel.ui-lib.com/charts/apexBubbleCharts">Bubble Charts</a></li>
-                        <li><a class=""
-                                href="http://gull-html-laravel.ui-lib.com/charts/apexColumnCharts">Column Charts</a></li>
-                        <li><a class=""
-                                href="http://gull-html-laravel.ui-lib.com/charts/apexCandleStickCharts">CandleStick Charts</a></li>
-                        <li><a class=""
-                                href="http://gull-html-laravel.ui-lib.com/charts/apexLineCharts">Line Charts</a></li>
-                        <li><a class=""
-                                href="http://gull-html-laravel.ui-lib.com/charts/apexMixCharts">Mix Charts</a></li>
-                        <li><a class=""
-                                href="http://gull-html-laravel.ui-lib.com/charts/apexPieDonutCharts">PieDonut Charts</a></li>
-                        <li><a class=""
-                                href="http://gull-html-laravel.ui-lib.com/charts/apexRadarCharts">Radar Charts</a></li>
-                        <li><a class=""
-                                href="http://gull-html-laravel.ui-lib.com/charts/apexRadialBarCharts">RadialBar Charts</a></li>
-                        <li><a class=""
-                                href="http://gull-html-laravel.ui-lib.com/charts/apexScatterCharts">Scatter Charts</a></li>
-                        <li><a class=""
-                                href="http://gull-html-laravel.ui-lib.com/charts/apexSparklineCharts">Sparkline Charts</a></li>
-
-                    </ul>
                 </li>
-
-
             </ul>
         </div>
-
-        <div class="submenu-area" data-parent="apps">
+        
+        
+        <div class="submenu-area" data-parent="documentos">
             <header>
-                <h6>Apps</h6>
-                <p>Lorem ipsum dolor sit.</p>
+                <h6>Documentos</h6>
+                <p>Administração de Documentos</p>
             </header>
-            <ul class="childNav" data-parent="apps">
+            <ul class="childNav" data-parent="documentos">
 
-                <li class="nav-item dropdown-sidemenu">
-                    <a>
-                        <i class="nav-icon i-Receipt"></i>
-                        <span class="item-name">Task Manager <span
-                                class=" ml-2 badge badge-pill badge-danger">New</span></span>
-                        <i class="dd-arrow i-Arrow-Down"></i>
-                    </a>
-                    <ul class="submenu">
-                        <li>
-                            <a class=""
-                                href="http://gull-html-laravel.ui-lib.com/apps/task-manager">
-                                <i class="nav-icon i-Receipt"></i>
-                                <span class="item-name">Task manager</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class=""
-                                href="http://gull-html-laravel.ui-lib.com/apps/task-manager-list">
-                                <i class="nav-icon i-Receipt-4"></i>
-                                <span class="item-name">Task manager list</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="" href="http://gull-html-laravel.ui-lib.com/apps/toDo">
-                                <i class="nav-icon i-Receipt-4"></i>
-                                <span class="item-name">Minimal ToDo</span>
-                            </a>
-                        </li>
-                        <li></li>
-                    </ul>
-                </li>
-
-                <li class="nav-item dropdown-sidemenu">
-                    <a>
-                        <i class="nav-icon i-Cash-Register"></i>
-                        <span class="item-name">Ecommerce <span
-                                class=" ml-2 badge badge-pill badge-danger">New</span></span>
-                        <i class="dd-arrow i-Arrow-Down"></i>
-                    </a>
-                    <ul class="submenu">
-                        <li>
-                            <a class=""
-                                href="http://gull-html-laravel.ui-lib.com/apps/ecommerce/products">
-                                <i class="nav-icon i-Shop-2"></i>
-                                <span class="item-name">Products</span>
-                            </a>
-                        </li>
-
-
-                        <li>
-                            <a class=""
-                                href="http://gull-html-laravel.ui-lib.com/apps/ecommerce/product-details">
-                                <i class="nav-icon i-Tag-2"></i>
-                                <span class="item-name">Product Details</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class=""
-                                href="http://gull-html-laravel.ui-lib.com/apps/ecommerce/cart">
-                                <i class="nav-icon i-Add-Cart"></i>
-                                <span class="item-name">Cart</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a class=""
-                                href="http://gull-html-laravel.ui-lib.com/apps/ecommerce/checkout">
-                                <i class="nav-icon i-Cash-register-2"></i>
-                                <span class="item-name">Checkout</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="nav-item dropdown-sidemenu">
-                    <a>
-                        <i class="nav-icon i-Business-ManWoman"></i>
-                        <span class="item-name">Contacts<span
-                                class=" ml-2 badge badge-pill badge-danger">New</span></span>
-                        <i class="dd-arrow i-Arrow-Down"></i>
-                    </a>
-                    <ul class="submenu">
-
-                        <li>
-                            <a class=""
-                                href="http://gull-html-laravel.ui-lib.com/apps/contacts/contact-list-table">
-                                <i class="nav-icon i-Business-Mens"></i>
-                                <span class="item-name">Contact Table
-                                    
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class=""
-                                href="http://gull-html-laravel.ui-lib.com/apps/contacts/lists">
-                                <i class="nav-icon i-Business-Mens"></i>
-                                <span class="item-name">Contact Lists</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class=""
-                                href="http://gull-html-laravel.ui-lib.com/apps/contacts/grid">
-                                <i class="nav-icon i-Conference"></i>
-                                <span class="item-name">Contact Grid</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class=""
-                                href="http://gull-html-laravel.ui-lib.com/apps/contacts/contact-details">
-                                <i class="nav-icon i-Find-User"></i>
-                                <span class="item-name">Contact Details</span>
-                            </a>
-                        </li>
-
-
-
-                    </ul>
-                </li>
                 <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/apps/invoice">
-                        <i class="nav-icon i-Add-File"></i>
-                        <span class="item-name">Invoice</span>
+                    <a class=""
+                        href="{{url('admin/documentos/index')}}">
+                        <i class="nav-icon i-File-Clipboard-Text--Image"></i>
+                        <span class="item-name">Lista de Documentos</span>
                     </a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/apps/inbox">
-                        <i class="nav-icon i-Email"></i>
-                        <span class="item-name">Inbox</span>
+                    <a class=""
+                        href="{{url('admin/documentos/create')}}">
+                        <i class="nav-icon i-File-Clipboard-Text--Image"></i>
+                        <span class="item-name">Adicionar Documentos </span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/apps/chat">
-                        <i class="nav-icon i-Speach-Bubble-3"></i>
-                        <span class="item-name">Chat</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/apps/calendar">
-                        <i class="nav-icon i-Calendar-4"></i>
-                        <span class="item-name">Calendar</span>
-                    </a>
-                </li>
-                
             </ul>
         </div>
-        <div class="submenu-area" data-parent="extrakits">
+
+        
+        <div class="submenu-area" data-parent="fabricantes">
             <header>
-                <h6>Extra Kits</h6>
-                <p>Lorem ipsum dolor sit.</p>
+                <h6>Carros</h6>
+                <p>Administração de Fabricantes</p>
             </header>
-            <ul class="childNav" data-parent="extrakits">
+            <ul class="childNav" data-parent="fabricantes">
+
                 <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/extrakits/dropDown">
-                        <i class="nav-icon i-Arrow-Down-in-Circle"></i>
-                        <span class="item-name">Dropdown</span>
+                    <a class=""
+                        href="{{url('admin/fabricantes/index')}}">
+                        <i class="nav-icon i-File-Clipboard-Text--Image"></i>
+                        <span class="item-name">Lista de Fabricantes</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a class=""
-                        href="http://gull-html-laravel.ui-lib.com/extrakits/imageCroper">
-                        <i class="nav-icon i-Crop-2"></i>
-                        <span class="item-name">Image Cropper</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/extrakits/loader">
-                        <i class="nav-icon i-Loading-3"></i>
-                        <span class="item-name">Loaders</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class=""
-                        href="http://gull-html-laravel.ui-lib.com/extrakits/laddaButton">
-                        <i class="nav-icon i-Loading-2"></i>
-                        <span class="item-name">Ladda Buttons</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/extrakits/toastr">
-                        <i class="nav-icon i-Bell"></i>
-                        <span class="item-name">Toastr</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class=""
-                        href="http://gull-html-laravel.ui-lib.com/extrakits/sweetAlert">
-                        <i class="nav-icon i-Approved-Window"></i>
-                        <span class="item-name">Sweet Alerts</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/extrakits/tour">
-                        <i class="nav-icon i-Plane"></i>
-                        <span class="item-name">User Tour</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/extrakits/upload">
-                        <i class="nav-icon i-Data-Upload"></i>
-                        <span class="item-name">Upload</span>
+                        href="{{url('admin/fabricantes/create')}}">
+                        <i class="nav-icon i-File-Clipboard-Text--Image"></i>
+                        <span class="item-name">Adicionar Fabricantes </span>
                     </a>
                 </li>
             </ul>
         </div>
-        <div class="submenu-area" data-parent="uikits">
+
+        
+        <div class="submenu-area" data-parent="modelos">
             <header>
-                <h6>UI Kits</h6>
-                <p>Lorem ipsum dolor sit.</p>
+                <h6>Modelos</h6>
+                <p>Administração de Modelos</p>
             </header>
-            <ul class="childNav" data-parent="uikits">
-                <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/uikits/alerts">
-                        <i class="nav-icon i-Bell1"></i>
-                        <span class="item-name">Alerts</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/uikits/accordion">
-                        <i class="nav-icon i-Split-Horizontal-2-Window"></i>
-                        <span class="item-name">Accordion</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/uikits/badges">
-                        <i class="nav-icon i-Medal-2"></i>
-                        <span class="item-name">Badges</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/uikits/buttons">
-                        <i class="nav-icon i-Cursor-Click"></i>
-                        <span class="item-name">Buttons</span>
-                    </a>
-                </li>
+            <ul class="childNav" data-parent="modelos">
+
                 <li class="nav-item">
                     <a class=""
-                        href="http://gull-html-laravel.ui-lib.com/uikits/bootstrap-tab">
-                        <i class="nav-icon i-Cursor-Click"></i>
-                        <span class="item-name">Bootstrap tab</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/uikits/cards">
-                        <i class="nav-icon i-Line-Chart-2"></i>
-                        <span class="item-name">Cards</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class=""
-                        href="http://gull-html-laravel.ui-lib.com/uikits/cards-metrics">
-                        <i class="nav-icon i-ID-Card"></i>
-                        <span class="item-name">Card Metrics</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/uikits/carousel">
-                        <i class="nav-icon i-Video-Photographer"></i>
-                        <span class="item-name">Carousels</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/uikits/lists">
-                        <i class="nav-icon i-Belt-3"></i>
-                        <span class="item-name">Lists</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class=""
-                        href="http://gull-html-laravel.ui-lib.com/uikits/pagination">
-                        <i class="nav-icon i-Arrow-Next"></i>
-                        <span class="item-name">Paginations</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/uikits/popover">
-                        <i class="nav-icon i-Speach-Bubble-2"></i>
-                        <span class="item-name">Popover</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class=""
-                        href="http://gull-html-laravel.ui-lib.com/uikits/progressbar">
-                        <i class="nav-icon i-Loading"></i>
-                        <span class="item-name">Progressbar</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/uikits/tables">
-                        <i class="nav-icon i-File-Horizontal-Text"></i>
-                        <span class="item-name">Tables</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/uikits/tabs">
-                        <i class="nav-icon i-New-Tab"></i>
-                        <span class="item-name">Tabs</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/uikits/tooltip">
-                        <i class="nav-icon i-Speach-Bubble-8"></i>
-                        <span class="item-name">Tooltip</span>
+                        href="{{url('admin/modelos/index')}}">
+                        <i class="nav-icon i-File-Clipboard-Text--Image"></i>
+                        <span class="item-name">Lista de Modelos</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="" href="http://gull-html-laravel.ui-lib.com/uikits/modals">
-                        <i class="nav-icon i-Duplicate-Window"></i>
-                        <span class="item-name">Modals</span>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a class=""
-                        href="http://gull-html-laravel.ui-lib.com/uikits/NoUislider">
-                        <i class="nav-icon i-Width-Window"></i>
-                        <span class="item-name">Sliders</span>
+                        href="{{url('admin/modelos/create')}}">
+                        <i class="nav-icon i-File-Clipboard-Text--Image"></i>
+                        <span class="item-name">Adicionar Modelos </span>
                     </a>
                 </li>
             </ul>
         </div>
+
+        
+        <div class="submenu-area" data-parent="parques">
+            <header>
+                <h6>Parques</h6>
+                <p>Administração de Parques</p>
+            </header>
+            <ul class="childNav" data-parent="parques">
+
+                <li class="nav-item">
+                    <a class=""
+                        href="{{url('admin/parques/index')}}">
+                        <i class="nav-icon i-File-Clipboard-Text--Image"></i>
+                        <span class="item-name">Lista de Parques</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class=""
+                        href="{{url('admin/parques/create')}}">
+                        <i class="nav-icon i-File-Clipboard-Text--Image"></i>
+                        <span class="item-name">Adicionar Parques </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        
+        <div class="submenu-area" data-parent="seguradoras">
+            <header>
+                <h6>Seguradoras</h6>
+                <p>Administração de Seguradoras</p>
+            </header>
+            <ul class="childNav" data-parent="seguradoras">
+
+                <li class="nav-item">
+                    <a class=""
+                        href="{{url('admin/seguadoras/index')}}">
+                        <i class="nav-icon i-File-Clipboard-Text--Image"></i>
+                        <span class="item-name">Lista de Seguradoras</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class=""
+                        href="{{url('admin/seguradoras/create')}}">
+                        <i class="nav-icon i-File-Clipboard-Text--Image"></i>
+                        <span class="item-name">Adicionar Seguradoras </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        
+        <div class="submenu-area" data-parent="trackers">
+            <header>
+                <h6>Carros</h6>
+                <p>Administração de Trackers</p>
+            </header>
+            <ul class="childNav" data-parent="trackers">
+
+                <li class="nav-item">
+                    <a class=""
+                        href="{{url('admin/trackers/index')}}">
+                        <i class="nav-icon i-File-Clipboard-Text--Image"></i>
+                        <span class="item-name">Lista de Trackers</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class=""
+                        href="{{url('admin/trackers/create')}}">
+                        <i class="nav-icon i-File-Clipboard-Text--Image"></i>
+                        <span class="item-name">Adicionar Trackers </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    
         <div class="submenu-area" data-parent="sessions">
             <header>
                 <h6>Session Pages</h6>
@@ -720,17 +466,7 @@
                                 <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem odio amet eos dolore suscipit placeat.</p>
                                 <button class="btn btn-lg btn-rounded btn-outline-warning">Learn More</button>
                             </div>
-                            <div class="col-md-4 p-4">
-                                <p class="text-primary text--cap border-bottom-primary d-inline-block">Features</p>
-                                <div class="menu-icon-grid w-auto p-0">
-                                    <a href="#"><i class="i-Shop-4"></i> Home</a>
-                                    <a href="#"><i class="i-Library"></i> UI Kits</a>
-                                    <a href="#"><i class="i-Drop"></i> Apps</a>
-                                    <a href="#"><i class="i-File-Clipboard-File--Text"></i> Forms</a>
-                                    <a href="#"><i class="i-Checked-User"></i> Sessions</a>
-                                    <a href="#"><i class="i-Ambulance"></i> Support</a>
-                                </div>
-                            </div>
+                           
                                  <div class="col-md-4 p-4">
                                 <p class="text-primary text--cap border-bottom-primary d-inline-block">Components</p>
                                 <ul class="links">

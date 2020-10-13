@@ -14,11 +14,11 @@ class Carro extends Model
         'carro_motorSize','carro_motorCode','carro_conducao',
         'carro_caixa','carro_versaoClasse','carro_volante',
         'carro_corExterna','carro_combustivel','carro_assentos',
-        'carro_portas','carro_peso','carro_lotacao','car_foto[]'      
+        'carro_portas','carro_peso','carro_lotacao','car_foto'      
     ];
 
-    function acessorio() {
-        return $this->belongsToMany('App\Acessorio', 'acessorio_carros','carro_id','acessorio_id');
+    function acessorios() {
+        return $this->belongsToMany('App\Acessorio', 'acessorio_carros','id_carro','id_acessorio');
     }
 
     function categoria() {
@@ -33,8 +33,8 @@ class Carro extends Model
         return $this->belongsTo('App\Parque', 'id_parque','parque_id');
     }
 
-    function photos() {
-        return $this->hasMany('App\CarPhoto', 'id_carphoto','carphoto_id');
+    function carphotos() {
+        return $this->hasMany('App\CarPhoto', 'carphoto_id','carphoto_id');
     }
 
 }

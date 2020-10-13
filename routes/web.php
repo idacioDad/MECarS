@@ -49,7 +49,7 @@ Route::get('/pages/comingsoon', function() {
 
 
 //listagem de routes para implementacao midlleware admin- aula nr 20
-//pagina de afmi
+//pagina de admin
 Route::get('/admin/index', function () {
     return view('admin.index');
 });

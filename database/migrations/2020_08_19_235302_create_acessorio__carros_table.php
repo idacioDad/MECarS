@@ -13,7 +13,7 @@ class CreateAcessorioCarrosTable extends Migration
      */
     public function up()
     {
-        Schema::create('acessorio__carros', function (Blueprint $table) {
+        Schema::create('acessorio_carros', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('id_carro');
             $table->foreign('id_carro')->references('carro_id')->on('carros');
