@@ -7,6 +7,7 @@ use App\Parque;
 use App\Modelo;
 use App\Categoria;
 use App\CarPhoto;
+use App\Acessorio;
 use Illuminate\Http\Request;
 
 class CarroController extends Controller
@@ -18,7 +19,10 @@ class CarroController extends Controller
      */
     public function index()
     {
-        //
+
+        $carros = Carro::with('parque','modelo','categoria', 'acessorios','carphotos')->get();
+        
+        return view('admin.carros.index')->with(compact('carros'));
     }
 
     /**
@@ -48,7 +52,7 @@ class CarroController extends Controller
             'carro_motorSize.required'=>'size required','carro_motorCode.required'=>'motor code required','carro_conducao.required'=>'conducao required',
             'carro_caixa.required'=>'caixa required','carro_versaoClasse.required'=>'versao required','carro_volante'=>'required',
             'carro_corExterna.required'=>'cor required','carro_combustivel.required'=>'combustivel required','carro_assentos.required'=>'assentos required',
-            'carro_portas.required'=>'portas required','carro_peso.required'=>'peso required','carro_lotacao.required'=>'lotacao required','car_foto[]'=>'required|image|max:2048',
+            'carro_portas.required'=>'portas required','carro_peso.required'=>'peso required','carro_lotacao.required'=>'lotacao required','car_foto.required'=>'fotos required|image|max:2048',
             ]);
 
             $carro = new Carro($request->input());
@@ -82,21 +86,22 @@ class CarroController extends Controller
             $carro->save();
             $id_carro=$carro->carro_id;
 
-            $images = $request->car_foto; // collection
+            if($images =$request->hasFile('car_foto')){
+            $images = $request->file('car_foto'); // collection
 
             // loop over collection an store each image 
             foreach($images as $image) {
-                $filename = $file->getClientOriginalName();
+                $filenome = $image->getClientOriginalName();
                 $destinationPath = public_path().'/images_upload/carros';
 
-                $uploadSuccess = $file->move($destinationPath, $filename);
+                $uploadSuccess = $image->move($destinationPath, $filenome);
 
-                $carphoto = new CarPhoto(); // this model you have to create
+                $carphoto = new CarPhoto(); 
                 $carphoto->id_carro = $id_carro;
-                $carphoto->car_foto = $filename;
+                $carphoto->car_foto = $filenome;
                 $carphoto->save();
             }
-
+        }
 
     }
 
