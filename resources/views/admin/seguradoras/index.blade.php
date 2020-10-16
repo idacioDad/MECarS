@@ -42,7 +42,7 @@
                                             @foreach($seguradoras as $seguradora)
                                                 <tr>
                                                     <th scope="row">{{ $seguradora->seguradora_id }}</th>
-                                                    <td><img src="{{asset ('images_upload/seguradoras/$seguradora-> seguradora_logo') }}"></td>
+                                                    <td><img src="{{asset ('images_upload/seguradoras/'.$seguradora-> seguradora_logo) }}"></td>
                                                     <td>{{ $seguradora-> seguradora_nome }}</td>
                                                     <td>{{ $seguradora-> seguradora_email }}</td>
                                                     <td>{{ $seguradora-> seguradora_contacto }}</td>

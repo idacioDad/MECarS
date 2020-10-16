@@ -1,4 +1,4 @@
-extends(layouts.dashboard)
+@extends('layouts.dashboard')
 
 @section('content')
 
@@ -33,7 +33,6 @@ extends(layouts.dashboard)
                                                     <th scope="col">Modelo do Carro</th>
                                                     <th scope="col">Categoria</th>
                                                     <th scope="col">Preco</th>
-                                                    <th scope="col">foto</th>
                                                     <th scope="col">Acção</th>
                                                 </tr>
                                             </thead>
@@ -43,10 +42,10 @@ extends(layouts.dashboard)
                                                 <tr>
                                                     <th scope="row">{{ $carro->carro_id }}</th>
                                                     <td>{{ $carro->parque->parque_nome }}</td>
+                                                    <td>{{ $carro->modelo->fabricantes->fabricante_nome }}</td>
                                                     <td>{{ $carro->modelo-> modelo_nome }}</td>
                                                     <th scope="row">{{ $carro->categoria->categoria_nome }}</th>
                                                     <td>{{ $carro->carro_preco }}</td>
-                                                    <td>{{ $carro->carphoto->car_foto }}</td>
                                                   
                                                     <td>
                                                         <a href="{{ route('carros.edit',$carro->carro_id) }}" class="text-success mr-2">
