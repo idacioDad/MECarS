@@ -1,8 +1,8 @@
 @extends('layouts.dashboard')
 
 @section('content')
-<li><a href="#">Dashboard</a></li>
-                    
+<li><a href="{{url('admin/index')}}">Dashboard</a></li>
+<li><a href="{{url('/')}}">Ir ao Site</a></li>
                     </ul>
                 </div>
     

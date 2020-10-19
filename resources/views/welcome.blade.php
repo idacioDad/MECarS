@@ -185,7 +185,7 @@
 
 
         <section class="block">
-            <div style="background: url('{{asset('assets/img/call-to-action-bg.jpg')}}') repeat scroll 50% 422.28px transparent; background-attachment: fixed;" class="parallax scrolly-invisible  blackish"></div><!-- PARALLAX BACKGROUND IMAGE -->	
+            <!--div style="background: url('{{asset('assets/img/call-to-action-bg.jpg')}}') repeat scroll 50% 422.28px transparent; background-attachment: fixed;" class="parallax scrolly-invisible  blackish"></div--><!-- PARALLAX BACKGROUND IMAGE -->	
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -201,340 +201,68 @@
 
         <!-- Pequena Montra de Viaturas -->
         <section class="block">
+        <div style="background: transparent url(&quot;{{asset('assets/img/call-to-action-big.jpg')}}&quot;) repeat scroll 50% 0px; background-attachment: fixed;" class="parallax scrolly-invisible  blackish"></div>
             <div class="container">
                 <div class="heading4">
-                    <h2>Produtos em Destaque</h2>
-                    <span>Lorem ipsum dolor consectetu</span>
+                    <h2>Serviços</h2>
+                    <span>A MECarS está focada em garantir a segurança, dinamismo, comodidade e satisfação aos seus clientes<br></span>
                 </div>
-                <!--div class="row"-->
-                    <!--div class="col-md-12"-->
+                <div class="row">
+                    <div class="col-md-12">
                         <div class="vehiculs-sec">
                             <div class="row">                                
                                 <div class="col-md-4">
                                     <div class="vehiculs-box">
                                         <div class="vehiculs-thumb">
-                                            <img src="{{asset('assets/img/demo/vehicul4.jpg')}}" alt="" />
-                                            <span class="spn-status"> Semi-New </span>
-                                            <span class="spn-save"> <i class="ti ti-heart"></i> </span>
+                                            <img src="{{asset('assets/img/services/venda.png')}}" alt="" />
 
-                                            <div class="user-preview">
-                                                <a class="col" href="agent.html">
-                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/4.png')}}" title="Camilė">
-                                                </a> 
-                                            </div> 
-                                            <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
-                                            <p class="car-info-smal">
-                                                Registration 2010<br>
-                                                3.0 Diesel<br>
-                                                230 HP<br>
-                                                Body Coupe<br>
-                                                80 000 Miles
+                                                        <p class="car-info-smal">
+                                                Venda de Viaturas dos Parques Nacionais<br>
+                                                Receba  carro em sua casa<br>
+                                                
                                             </p>
                                         </div>
-                                        <h3><a href="vehicul.html" title="">Mercedes-Benz</a></h3>
-                                        <span class="price">$444000</span>
-                                        <span class="rate-it">
-                                            <i title="nice" class="ti ti-star star-on-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star  star-on-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star star-on-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star off star-off-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star off star-off-png"></i> 
-                                        </span>
+                                        
                                     </div><!-- prop Box -->
                                 </div>                                
                                 <div class="col-md-4">
                                     <div class="vehiculs-box">
                                         <div class="vehiculs-thumb">
-                                            <img src="{{asset('assets/img/demo/vehicul3.jpg')}}" alt="" />
-                                            <span class="spn-status"> Damaged </span>
-                                            <span class="spn-save"> <i class="ti ti-heart"></i> </span>
+                                            <img src="{{asset('assets/img/services/seguro.png')}}" alt="" />
 
-                                            <div class="user-preview">
-                                                <a class="col" href="agent.html">
-                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/1.png')}}" title="Camilė">
-                                                </a> 
-                                            </div> 
-                                            <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
                                             <p class="car-info-smal">
-                                                Registration 2010<br>
-                                                3.0 Diesel<br>
-                                                230 HP<br>
-                                                Body Coupe<br>
-                                                80 000 Miles
+                                                Tratamento de apólices de seguros<br>
+                                                No acto da compra<br>
+                                                A par<br>
+                                                
                                             </p>
                                         </div>
-                                        <h3><a href="vehicul.html" title="Mercedes-Benz">Mercedes-Benz</a></h3>
-                                        <span class="price">$789000</span>
-                                        <span class="rate-it">
-                                            <i title="nice" class="ti ti-star star-on-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star  star-on-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star star-on-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star off star-off-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star off star-off-png"></i> 
-                                        </span>
+                                      
                                     </div><!-- prop Box -->
                                 </div>
                                 <div class="col-md-4">
                                     <div class="vehiculs-box">
                                         <div class="vehiculs-thumb">
-                                            <img src="{{asset('assets/img/demo/vehicul2.jpg')}}" alt="" />
-                                            <span class="spn-status"> Semi-New </span>
-                                            <span class="spn-save"> <i class="ti ti-heart"></i> </span>
-
-                                            <div class="user-preview">
-                                                <a class="col" href="agent.html">
-                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/2.png')}}" title="Camilė">
-                                                </a> 
+                                            <img src="{{asset('assets/img/services/assistencia.png')}}" alt="" />
+                                            
                                             </div> 
-                                            <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
                                             <p class="car-info-smal">
-                                                Registration 2010<br>
-                                                3.0 Diesel<br>
-                                                230 HP<br>
-                                                Body Coupe<br>
-                                                80 000 Miles
+                                                Assisteência Técnica <br>
+                                                Prestação de Socorros a viaturas avariadas<br>
+                                                
                                             </p>
                                         </div>
-                                        <h3><a href="vehicul.html" title="Mercedes-Benz">Mercedes-Benz</a></h3>
-                                        <span class="price">$380000</span>
-                                        <span class="rate-it">
-                                            <i title="nice" class="ti ti-star star-on-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star  star-on-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star star-on-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star off star-off-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star off star-off-png"></i> 
-                                        </span>
+                                        
                                     </div><!-- prop Box -->
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="vehiculs-box">
-                                        <div class="vehiculs-thumb">
-                                            <img src="{{asset('assets/img/demo/vehicul4.jpg')}}" alt="" />
-                                            <span class="spn-status"> Damaged </span>
-                                            <span class="spn-save"> <i class="ti ti-heart"></i> </span>
-
-                                            <div class="user-preview">
-                                                <a class="col" href="agent.html">
-                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/4.png')}}" title="Camilė">
-                                                </a> 
-                                            </div> 
-                                            <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
-                                            <p class="car-info-smal">
-                                                Registration 2010<br>
-                                                3.0 Diesel<br>
-                                                230 HP<br>
-                                                Body Coupe<br>
-                                                80 000 Miles
-                                            </p>
-                                        </div>
-                                        <h3><a href="vehicul.html" title="Mercedes-Benz">Mercedes-Benz</a></h3>
-                                        <span class="price">$1000000</span>
-                                        <span class="rate-it">
-                                            <i title="nice" class="ti ti-star star-on-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star  star-on-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star star-on-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star off star-off-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star off star-off-png"></i> 
-                                        </span>
-                                    </div><!-- prop Box -->
+                               
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="vehiculs-box">
-                                        <div class="vehiculs-thumb">
-                                            <img src="{{asset('assets/img/demo/vehicul5.jpg')}}" alt="" />
-                                            <span class="spn-status"> Used </span>
-                                            <span class="spn-save"> <i class="ti ti-heart"></i> </span>
-
-                                            <div class="user-preview">
-                                                <a class="col" href="agent.html">
-                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/3.png')}}" title="Camilė">
-                                                </a> 
-                                            </div> 
-                                            <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
-                                            <p class="car-info-smal">
-                                                Registration 2010<br>
-                                                3.0 Diesel<br>
-                                                230 HP<br>
-                                                Body Coupe<br>
-                                                80 000 Miles
-                                            </p>
-                                        </div>
-                                        <h3><a href="vehicul.html" title="Mercedes-Benz">Mercedes-Benz</a></h3>
-                                        <span class="price">$500000</span>
-                                        <span class="rate-it">
-                                            <i title="nice" class="ti ti-star star-on-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star  star-on-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star star-on-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star off star-off-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star off star-off-png"></i> 
-                                        </span>
-                                    </div><!-- prop Box -->
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="vehiculs-box">
-                                        <div class="vehiculs-thumb">
-                                            <img src="{{asset('assets/img/demo/vehicul3.jpg')}}" alt="" />
-                                            <span class="spn-status"> Damaged</span>
-                                            <span class="spn-save"> <i class="ti ti-heart"></i> </span>
-
-                                            <div class="user-preview">
-                                                <a class="col" href="agent.html">
-                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/2.png')}}" title="Camilė">
-                                                </a> 
-                                            </div> 
-                                            <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
-                                            <p class="car-info-smal">
-                                                Registration 2010<br>
-                                                3.0 Diesel<br>
-                                                230 HP<br>
-                                                Body Coupe<br>
-                                                80 000 Miles
-                                            </p>
-                                        </div>
-                                        <h3><a href="vehicul.html" title="Mercedes-Benz">Mercedes-Benz</a></h3>
-                                        <span class="price">$340000</span>
-                                        <span class="rate-it">
-                                            <i title="nice" class="ti ti-star star-on-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star  star-on-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star star-on-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star off star-off-png"></i>&nbsp;
-                                            <i title="nice" class="ti ti-star off star-off-png"></i> 
-                                        </span>
-                                    </div><!-- prop Box -->
-                                </div>
-                            </div>
-                        </div>
-                    <!--/div>
-                </div-->
-            </div>
-        </section>
-<!-- Galeria de Parques de Viaturas -->
-<section class="block">
-            <div style="background: transparent url(&quot;{{asset('assets/img/call-to-action-big.jpg')}}&quot;) repeat scroll 50% 0px; background-attachment: fixed;" class="parallax scrolly-invisible  blackish"></div>
-            <div class="container">                
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="heading4">
-                            <h2>OUR AGENTS</h2>
-                            <span>Lorem ipsum dolor</span>
-                        </div>
-                        <div class="agents-carousal-sec">
-                            <ul class="carousel">
-                                <li>
-                                    <div class="agent-content">
-                                        <a href="agent.html"><img src="{{asset('assets/img/agents/agent1.jpg')}}" alt="" /></a>
-                                        <h3>SUPER AGENT</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur <br> sed do eiusmod tempor incidid</p>
-
-                                        <div class="agent-social-wrap">
-                                            <div class="social-list agent-social">
-                                                <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                                                <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-                                                <a href="#" title="Google +" target="_blank"><i class="fa fa-google-plus"></i></a>
-                                                <a href="#" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                                <a href="#" title="Pinterest" target="_blank"><i class="fa fa-pinterest"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="agent-content">
-                                        <a href="agent.html"><img src="{{asset('assets/img/agents/agent3.jpg')}}" alt="" /></a>
-                                        <h3>SUPER AGENT</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur <br> sed do eiusmod tempor incidid</p>
-
-                                        <div class="agent-social-wrap">
-                                            <div class="social-list agent-social">
-                                                <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                                                <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-                                                <a href="#" title="Google +" target="_blank"><i class="fa fa-google-plus"></i></a>
-                                                <a href="#" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                                <a href="#" title="Pinterest" target="_blank"><i class="fa fa-pinterest"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="agent-content">
-                                        <a href="agent.html"><img src="{{asset('assets/img/agents/agent5.jpg')}}" alt="" /></a>
-                                        <h3>SUPER AGENT</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur <br> sed do eiusmod tempor incidid</p>
-
-                                        <div class="agent-social-wrap">
-                                            <div class="social-list agent-social">
-                                                <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                                                <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-                                                <a href="#" title="Google +" target="_blank"><i class="fa fa-google-plus"></i></a>
-                                                <a href="#" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                                <a href="#" title="Pinterest" target="_blank"><i class="fa fa-pinterest"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="agent-content">
-                                        <a href="agent.html"><img src="{{asset('assets/img/agents/agent4.jpg')}}" alt="" /></a>
-                                        <h3>SUPER AGENT</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur <br> sed do eiusmod tempor incidid</p>
-
-                                        <div class="agent-social-wrap">
-                                            <div class="social-list agent-social">
-                                                <a href="#" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-                                                <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-                                                <a href="#" title="Google +" target="_blank"><i class="fa fa-google-plus"></i></a>
-                                                <a href="#" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
-                                                <a href="#" title="Pinterest" target="_blank"><i class="fa fa-pinterest"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>                
-            </div>            
-        </section>
-
-<!-- Exposicao Agencias Seguradoras -->
-<section class="block">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="agents-carousal-sec">
-                            <div class="heading4">
-                                <h2>OUR PARTNERS </h2>
-                                <span>Lorem ipsum dolor</span>
-                            </div>
-                            <div class="our-clients-sec">
-                                <ul class="carousel-client">
-                                    <li>
-                                        <a href="#" title=""><img src="{{asset('asssets/img/clients/our-client1.jpg')}}" alt="" /></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title=""><img src="{{asset('asssets/img/clients/our-client2.jpg')}}" alt="" /></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title=""><img src="{{asset('asssets/img/clients/our-client3.jpg')}}" alt="" /></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title=""><img src="{{asset('asssets/img/clients/our-client4.jpg')}}" alt="" /></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title=""><img src="{{asset('asssets/img/clients/our-client5.jpg')}}" alt="" /></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title=""><img src="{{asset('asssets/img/clients/our-client1.jpg')}}" alt="" /></a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title=""><img src="{{asset('asssets/img/clients/our-client3.jpg')}}" alt="" /></a>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>    
+        </section>
 
 
 @endsection

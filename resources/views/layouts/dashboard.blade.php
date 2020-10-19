@@ -175,7 +175,7 @@
 
                 <li class="nav-item">
                     <a class=""
-                        href="{{url('admin/acessorios/index')}}">
+                        href="{{url('admin/acessorios/')}}">
                         <i class="nav-icon i-File-Clipboard-Text--Image"></i>
                         <span class="item-name">Lista de Acessórios</span>
                     </a>
@@ -200,7 +200,7 @@
 
                 <li class="nav-item">
                     <a class=""
-                        href="{{url('admin/carros/index')}}">
+                        href="{{url('admin/carros/')}}">
                         <i class="nav-icon i-File-Clipboard-Text--Image"></i>
                         <span class="item-name">Lista de Carros</span>
                     </a>
@@ -226,7 +226,7 @@
 
                 <li class="nav-item">
                     <a class=""
-                        href="{{url('admin/documentos/index')}}">
+                        href="{{url('admin/documentos/')}}">
                         <i class="nav-icon i-File-Clipboard-Text--Image"></i>
                         <span class="item-name">Lista de Documentos</span>
                     </a>
@@ -252,7 +252,7 @@
 
                 <li class="nav-item">
                     <a class=""
-                        href="{{url('admin/fabricantes/index')}}">
+                        href="{{url('admin/fabricantes/')}}">
                         <i class="nav-icon i-File-Clipboard-Text--Image"></i>
                         <span class="item-name">Lista de Fabricantes</span>
                     </a>
@@ -278,7 +278,7 @@
 
                 <li class="nav-item">
                     <a class=""
-                        href="{{url('admin/modelos/index')}}">
+                        href="{{url('admin/modelos/')}}">
                         <i class="nav-icon i-File-Clipboard-Text--Image"></i>
                         <span class="item-name">Lista de Modelos</span>
                     </a>
@@ -304,7 +304,7 @@
 
                 <li class="nav-item">
                     <a class=""
-                        href="{{url('admin/parques/index')}}">
+                        href="{{url('admin/parques/')}}">
                         <i class="nav-icon i-File-Clipboard-Text--Image"></i>
                         <span class="item-name">Lista de Parques</span>
                     </a>
@@ -330,7 +330,7 @@
 
                 <li class="nav-item">
                     <a class=""
-                        href="{{url('admin/seguadoras/index')}}">
+                        href="{{url('admin/seguadoras/')}}">
                         <i class="nav-icon i-File-Clipboard-Text--Image"></i>
                         <span class="item-name">Lista de Seguradoras</span>
                     </a>
@@ -356,7 +356,7 @@
 
                 <li class="nav-item">
                     <a class=""
-                        href="{{url('admin/trackers/index')}}">
+                        href="{{url('admin/trackers/')}}">
                         <i class="nav-icon i-File-Clipboard-Text--Image"></i>
                         <span class="item-name">Lista de Trackers</span>
                     </a>
@@ -460,38 +460,28 @@
                     <div class="dropdown-menu text-left" aria-labelledby="dropdownMenuButton">
                         <div class="row m-0">
                             <div class="col-md-4 p-4 bg-img">
-                                <h2 class="title">Mega Menu <br> Sidebar</h2>
+                                <h2 class="title">Ir ao Site<br> Sidebar</h2>
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores natus laboriosam fugit, consequatur.
                                 </p>
                                 <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem odio amet eos dolore suscipit placeat.</p>
                                 <button class="btn btn-lg btn-rounded btn-outline-warning">Learn More</button>
                             </div>
                            
-                                 <div class="col-md-4 p-4">
-                                <p class="text-primary text--cap border-bottom-primary d-inline-block">Components</p>
-                                <ul class="links">
-                                    <li><a href="accordion.html">Accordion</a></li>
-                                    <li><a href="alerts.html">Alerts</a></li>
-                                    <li><a href="buttons.html">Buttons</a></li>
-                                    <li><a href="badges.html">Badges</a></li>
-                                    <li><a href="carousel.html">Carousels</a></li>
-                                    <li><a href="lists.html">Lists</a></li>
-                                    <li><a href="popover.html">Popover</a></li>
-                                    <li><a href="tables.html">Tables</a></li>
-                                    <li><a href="datatables.html">Datatables</a></li>
-                                    <li><a href="modals.html">Modals</a></li>
-                                    <li><a href="nouislider.html">Sliders</a></li>
-                                    <li><a href="tabs.html">Tabs</a></li>
-                                </ul>
-                            </div>
+                                
                         </div>
                     </div>
                 </div>
                 <!-- / Mega menu -->
+
+                <div class="title">
+                <a href="{{url('/')}}"><h2></h2></a>
+                </div>
+
                 <div class="search-bar">
                     <input type="text" placeholder="Search">
                     <i class="search-icon text-muted i-Magnifi-Glass1"></i>
                 </div>
+                
             </div>
 
             <div style="margin: auto"></div>
