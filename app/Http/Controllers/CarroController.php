@@ -147,6 +147,8 @@ class CarroController extends Controller
      */
     public function destroy(Carro $carro)
     {
-        //
+       
+        $carro->delete();
+        return redirect()->route('carros.index')->with('successo', 'Carro Removido!');
     }
 }

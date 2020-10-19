@@ -346,6 +346,6 @@
         });
     </script>
 
-@yield('content') 
+
 </body>
 </html>
