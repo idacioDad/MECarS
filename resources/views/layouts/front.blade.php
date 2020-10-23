@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{asset('assets/fonts/themify-icons/themify-icons.css')}}" type="text/css" /><!-- Icons -->
     <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.css')}}" type="text/css')}}" /><!-- Owl Carousal-->
     <link rel="stylesheet" href="{{asset('assets/css/price-range.css')}}" type="text/css" /><!-- Owl Carousal -->
-
+    <link rel="stylesheet" href="{{asset('assets/css/lightslider.min.css')}}" type="text/css"/>
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}" type="text/css" /><!-- Style -->	
     <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}" type="text/css" /><!-- Responsive -->	
     <link rel="stylesheet" href="{{asset('assets/css/colors.css')}}" type="text/css" /><!-- color -->	
@@ -55,7 +55,7 @@
                         <ul>
                         
                             <li>
-                                <a href="{{ url('/catalogo/show') }}" title="Loja de Carros">CARROS</a>
+                                <a href="{{ url('/catalogo') }}" title="Loja de Carros">CARROS</a>
                                 
                             </li>
                            
@@ -215,10 +215,12 @@
     <script type="text/javascript" src="{{asset('assets/js/scrolly.js')}}"></script><!-- Parallax -->
     <script type="text/javascript" src="{{asset('assets/js/price-range.js')}}"></script><!-- Parallax -->
     <script type="text/javascript" src="{{asset('assets/js/script.js')}}"></script><!-- Script -->
-
+    <script type="text/javascript" src="{{asset('assets/js/lightslider.min.js')}}"></script>
     <script src="{{asset('assets/js/rs-plugin/js/jquery.themepunch.tools.min.js')}}"></script>   
     <script src="{{asset('assets/js/rs-plugin/js/jquery.themepunch.revolution.min.js')}}"></script>
 
+
+    @yield('slide')  
     <script type="text/javascript">
         $(document).ready(function () {
             "use strict";
@@ -344,6 +346,53 @@
             });
 
         });
+
+        $(document).ready(function () {
+
+$('#image-gallery').lightSlider({
+    gallery: true,
+    item: 1,
+    thumbItem: 9,
+    slideMargin: 0,
+    speed: 500,
+    auto: true,
+    loop: true,
+    onSliderLoad: function () {
+        $('#image-gallery').removeClass('cS-hidden');
+    }
+});
+});
+
+$(document).ready(function () {
+            "use strict";
+            $(".related-vehiculs-items").owlCarousel({
+                autoplay: true,
+                autoplayTimeout: 3000,
+                smartSpeed: 2000,
+                loop: true,
+                dots: true,
+                nav: false,
+                marging: 30,
+                items: 4,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    600: {
+                        items: 2,
+                        nav: false
+                    },
+                    1000: {
+                        items: 3,
+                        nav: true,
+                        loop: false
+                    }
+                }
+            });
+        });
+
     </script>
 
 

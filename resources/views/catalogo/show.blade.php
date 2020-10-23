@@ -111,6 +111,7 @@
             </div>
         </section>
 
+   
         <section class="block">
             <div class="container">
                 <div class="row">
@@ -119,241 +120,45 @@
                             <div class="col-md-12 column">                               
                                 <div class="vehiculs-sec">
                                     <div class="vehiculs-list">
-                                        <div class="vehiculs-content">                                            
+                                        <div class="vehiculs-content"> 
+                                                                                  
                                             <div class="row">
+                                             @foreach($carros as $carro) 
                                                 <div class="col-md-4 col-sm-6  col-xs-12">
-
+                                                
                                                     <div class="vehiculs-box">
                                                         <div class="vehiculs-thumb">
-                                                            <img src="{{asset('assets/img/demo/vehicul1.jpg')}}" alt="" /> 
+                                                            <img src="{{asset ('images_upload/carros_Banner/'.$carro-> carro_foto) }}" alt="" /> 
                                                             <span class="spn-status"> Novo</span>
                                                             <span class="spn-save"> <i class="ti ti-heart"></i> </span>                                        
                                                             <div class="user-preview">
                                                                 <a class="col" href="agent.html">
-                                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/4.png')}}" title="Camilė">
+                                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset ('images_upload/parques/'.$carro->parque->parque_logo) }}" title="Camilė">
                                                                 </a> 
                                                             </div>
-                                                            <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
+                                                            <a class="proeprty-sh-more" href="{{url('/catalogo/viatura/'.$carro->carro_id)}}"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
                                                             <p class="car-info-smal">
-                                                                Ano: 2010<br>
-                                                                3.0 Diesel<br>
-                                                                230 HP<br>
-                                                                Body Coupe<br>
-                                                                80 000 Km
+                                                            {{ $carro->carro_ano_fabrico }}<br>
+                                                            {{ $carro->carro_combustivel}}<br>
+                                                            {{ $carro->carro_motorSize }}<br>
+                                                            {{ $carro->categoria->categoria_nome }}<br>
+                                                            {{ $carro->carro_Km }} KM
                                                             </p>
                                                         </div>
-                                                        <h3><a href="vehicul.html" title="Mercedes-Benz">Mercedes-Benz</a></h3>
-                                                        <span class="price">340 000 MZN</span>
-                                                    </div> 
+                                                        <h3><a href="vehicul.html" title="{{$carro->modelo->fabricantes->fabricante_nome}}">{{$carro->modelo->fabricantes->fabricante_nome}}</a></h3>
+                                                        <h4><a href="vehicul.html" title="{{$carro->modelo->modelo_nome}}">{{$carro->modelo->modelo_nome}}</a></h4>
+                                                        <span class="price">{{$carro->carro_preco}} MZN</span>
+                                                    </div>  
                                                 </div>
-                                                <div class="col-md-4 col-sm-6  col-xs-12">
-
-                                                    <div class="vehiculs-box">
-                                                        <div class="vehiculs-thumb">
-                                                            <img src="{{asset('assets/img/demo/vehicul1.jpg')}}" alt="" /> 
-                                                            <span class="spn-status"> Novo</span>
-                                                            <span class="spn-save"> <i class="ti ti-heart"></i> </span>                                        
-                                                            <div class="user-preview">
-                                                                <a class="col" href="agent.html">
-                                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/4.png')}}" title="Camilė">
-                                                                </a> 
-                                                            </div>
-                                                            <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
-                                                            <p class="car-info-smal">
-                                                                Ano: 2010<br>
-                                                                3.0 Diesel<br>
-                                                                230 HP<br>
-                                                                Body Coupe<br>
-                                                                80 000 Km
-                                                            </p>
-                                                        </div>
-                                                        <h3><a href="vehicul.html" title="Mercedes-Benz">Mercedes-Benz</a></h3>
-                                                        <span class="price">340 000 MZN</span>
-                                                    </div> 
-                                                </div>
-                                                <div class="col-md-4 col-sm-6  col-xs-12">
-
-                                                    <div class="vehiculs-box">
-                                                        <div class="vehiculs-thumb">
-                                                            <img src="{{asset('assets/img/demo/vehicul1.jpg')}}" alt="" /> 
-                                                            <span class="spn-status"> Novo</span>
-                                                            <span class="spn-save"> <i class="ti ti-heart"></i> </span>                                        
-                                                            <div class="user-preview">
-                                                                <a class="col" href="agent.html">
-                                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/4.png')}}" title="Camilė">
-                                                                </a> 
-                                                            </div>
-                                                            <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
-                                                            <p class="car-info-smal">
-                                                                Ano: 2010<br>
-                                                                3.0 Diesel<br>
-                                                                230 HP<br>
-                                                                Body Coupe<br>
-                                                                80 000 Km
-                                                            </p>
-                                                        </div>
-                                                        <h3><a href="vehicul.html" title="Mercedes-Benz">Mercedes-Benz</a></h3>
-                                                        <span class="price">340 000 MZN</span>
-                                                    </div> 
-                                                </div>
-                                                <div class="col-md-4 col-sm-6  col-xs-12">
-
-                                                    <div class="vehiculs-box">
-                                                        <div class="vehiculs-thumb">
-                                                            <img src="{{asset('assets/img/demo/vehicul1.jpg')}}" alt="" /> 
-                                                            <span class="spn-status"> Novo</span>
-                                                            <span class="spn-save"> <i class="ti ti-heart"></i> </span>                                        
-                                                            <div class="user-preview">
-                                                                <a class="col" href="agent.html">
-                                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/4.png')}}" title="Camilė">
-                                                                </a> 
-                                                            </div>
-                                                            <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
-                                                            <p class="car-info-smal">
-                                                                Ano: 2010<br>
-                                                                3.0 Diesel<br>
-                                                                230 HP<br>
-                                                                Body Coupe<br>
-                                                                80 000 Km
-                                                            </p>
-                                                        </div>
-                                                        <h3><a href="vehicul.html" title="Mercedes-Benz">Mercedes-Benz</a></h3>
-                                                        <span class="price">340 000 MZN</span>
-                                                    </div> 
-                                                </div>
-                                                <div class="col-md-4 col-sm-6  col-xs-12">
-
-                                                    <div class="vehiculs-box">
-                                                        <div class="vehiculs-thumb">
-                                                            <img src="{{asset('assets/img/demo/vehicul1.jpg')}}" alt="" /> 
-                                                            <span class="spn-status"> Novo</span>
-                                                            <span class="spn-save"> <i class="ti ti-heart"></i> </span>                                        
-                                                            <div class="user-preview">
-                                                                <a class="col" href="agent.html">
-                                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/4.png')}}" title="Camilė">
-                                                                </a> 
-                                                            </div>
-                                                            <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
-                                                            <p class="car-info-smal">
-                                                                Ano: 2010<br>
-                                                                3.0 Diesel<br>
-                                                                230 HP<br>
-                                                                Body Coupe<br>
-                                                                80 000 Km
-                                                            </p>
-                                                        </div>
-                                                        <h3><a href="vehicul.html" title="Mercedes-Benz">Mercedes-Benz</a></h3>
-                                                        <span class="price">340 000 MZN</span>
-                                                    </div> 
-                                                </div>
-                                                <div class="col-md-4 col-sm-6  col-xs-12">
-
-                                                    <div class="vehiculs-box">
-                                                        <div class="vehiculs-thumb">
-                                                            <img src="{{asset('assets/img/demo/vehicul1.jpg')}}" alt="" /> 
-                                                            <span class="spn-status"> Novo</span>
-                                                            <span class="spn-save"> <i class="ti ti-heart"></i> </span>                                        
-                                                            <div class="user-preview">
-                                                                <a class="col" href="agent.html">
-                                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/4.png')}}" title="Camilė">
-                                                                </a> 
-                                                            </div>
-                                                            <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
-                                                            <p class="car-info-smal">
-                                                                Ano: 2010<br>
-                                                                3.0 Diesel<br>
-                                                                230 HP<br>
-                                                                Body Coupe<br>
-                                                                80 000 Km
-                                                            </p>
-                                                        </div>
-                                                        <h3><a href="vehicul.html" title="Mercedes-Benz">Mercedes-Benz</a></h3>
-                                                        <span class="price">340 000 MZN</span>
-                                                    </div> 
-                                                </div>
-                                                <div class="col-md-4 col-sm-6  col-xs-12">
-
-                                                    <div class="vehiculs-box">
-                                                        <div class="vehiculs-thumb">
-                                                            <img src="{{asset('assets/img/demo/vehicul1.jpg')}}" alt="" /> 
-                                                            <span class="spn-status"> Novo</span>
-                                                            <span class="spn-save"> <i class="ti ti-heart"></i> </span>                                        
-                                                            <div class="user-preview">
-                                                                <a class="col" href="agent.html">
-                                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/4.png')}}" title="Camilė">
-                                                                </a> 
-                                                            </div>
-                                                            <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
-                                                            <p class="car-info-smal">
-                                                                Ano: 2010<br>
-                                                                3.0 Diesel<br>
-                                                                230 HP<br>
-                                                                Body Coupe<br>
-                                                                80 000 Km
-                                                            </p>
-                                                        </div>
-                                                        <h3><a href="vehicul.html" title="Mercedes-Benz">Mercedes-Benz</a></h3>
-                                                        <span class="price">340 000 MZN</span>
-                                                    </div> 
-                                                </div>
-                                                <div class="col-md-4 col-sm-6  col-xs-12">
-
-                                                    <div class="vehiculs-box">
-                                                        <div class="vehiculs-thumb">
-                                                            <img src="{{asset('assets/img/demo/vehicul1.jpg')}}" alt="" /> 
-                                                            <span class="spn-status"> Novo</span>
-                                                            <span class="spn-save"> <i class="ti ti-heart"></i> </span>                                        
-                                                            <div class="user-preview">
-                                                                <a class="col" href="agent.html">
-                                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/4.png')}}" title="Camilė">
-                                                                </a> 
-                                                            </div>
-                                                            <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
-                                                            <p class="car-info-smal">
-                                                                Ano: 2010<br>
-                                                                3.0 Diesel<br>
-                                                                230 HP<br>
-                                                                Body Coupe<br>
-                                                                80 000 Km
-                                                            </p>
-                                                        </div>
-                                                        <h3><a href="vehicul.html" title="Mercedes-Benz">Mercedes-Benz</a></h3>
-                                                        <span class="price">340 000 MZN</span>
-                                                    </div> 
-                                                </div>
-                                                <div class="col-md-4 col-sm-6  col-xs-12">
-
-                                                    <div class="vehiculs-box">
-                                                        <div class="vehiculs-thumb">
-                                                            <img src="{{asset('assets/img/demo/vehicul1.jpg')}}" alt="" /> 
-                                                            <span class="spn-status"> Novo</span>
-                                                            <span class="spn-save"> <i class="ti ti-heart"></i> </span>                                        
-                                                            <div class="user-preview">
-                                                                <a class="col" href="agent.html">
-                                                                    <img alt="Camilė" class="avatar avatar-small" src="{{asset('assets/img/4.png')}}" title="Camilė">
-                                                                </a> 
-                                                            </div>
-                                                            <a class="proeprty-sh-more" href="vehicul.html"><i class="fa fa-angle-double-right"> </i><i class="fa fa-angle-double-right"> </i></a>
-                                                            <p class="car-info-smal">
-                                                                Ano: 2010<br>
-                                                                3.0 Diesel<br>
-                                                                230 HP<br>
-                                                                Body Coupe<br>
-                                                                80 000 Km
-                                                            </p>
-                                                        </div>
-                                                        <h3><a href="vehicul.html" title="Mercedes-Benz">Mercedes-Benz</a></h3>
-                                                        <span class="price">340 000 MZN</span>
-                                                    </div> 
-                                                </div>
+                                           
+                     
+                                                @endforeach
                                             </div>
-                                            <ul class="pagination">
-                                                <li class="disabled"><a href="#" title=""><span>ANT</span></a></li>
-                                                <li><a href="#" title="">1</a></li>
-                                                <li class="active"><a href="#" title="">2</a></li>
-                                                <li><a href="#" title="">3</a></li>
-                                                <li><a href="#" title=""><span>PROX</span></a></li>
-                                            </ul>
+                                            
+                                            <div class="pagination">
+                                             
+                                               {{ $carros->appends(['sort' => 'votes'])->links() }}
+                                            </div>
                                         </div>
                                     </div><!-- Blog Post -->
                                 </div><!-- Blog POst Sec -->
@@ -365,4 +170,7 @@
             </div>
         </section>
 
+
+
 @endsection
+

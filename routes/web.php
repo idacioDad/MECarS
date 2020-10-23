@@ -23,13 +23,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // Creating a new route 
-Route::get('/catalogo/show', function() { 
-    return view('catalogo.show'); 
-});
+Route::get('/catalogo', 'CarroController@catalogo');
 
-Route::get('/catalogo/viatura', function() { 
-    return view('catalogo.viatura'); 
-});
+Route::get('/catalogo/viatura/{carro}', 'CarroController@show');
 
 Route::get('/pages/faq', function() { 
     return view('pages.faq'); 
