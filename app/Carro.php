@@ -34,7 +34,7 @@ class Carro extends Model
     }
 
     function carphotos() {
-        return $this->hasMany('App\CarPhoto', 'id_carro','carphoto_id');
+        return $this->hasMany('App\CarPhoto', 'id_carro','carro_id');
     }
 
 }

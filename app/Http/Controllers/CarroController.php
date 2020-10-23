@@ -9,6 +9,7 @@ use App\Categoria;
 use App\CarPhoto;
 use App\Acessorio;
 use Illuminate\Http\Request;
+use Image;
 
 class CarroController extends Controller
 {
@@ -23,6 +24,16 @@ class CarroController extends Controller
         $carros = Carro::with('parque','modelo','categoria', 'acessorios','carphotos')->get();
         
         return view('admin.carros.index')->with(compact('carros'));
+    }
+
+
+//show car list e catalogo page
+    public function catalogo()
+    {
+
+        $carros = Carro::with('parque','modelo','categoria', 'acessorios','carphotos')->paginate(12);
+        
+        return view('catalogo.show')->with(compact('carros'));
     }
 
     /**
@@ -69,6 +80,11 @@ class CarroController extends Controller
                 
                 $fileName = $file->getClientOriginalName() ;
                 $destinationPath = public_path().'/images_upload/carros_Banner' ;
+                $img = Image::make($file->path());
+                $img->resize(920, 1002, function ($constraint) {
+        
+                    $constraint->aspectRatio();
+                })->save($destinationPath.'/'.$fileName);
                 $file->move($destinationPath,$fileName);
                 $carro->carro_foto = $fileName ;
             }
@@ -94,6 +110,12 @@ class CarroController extends Controller
                 $filenome = $image->getClientOriginalName();
                 $destinationPath = public_path().'/images_upload/carros';
 
+                $img = Image::make($image->path());
+                $img->resize(1000, 600, function ($constraint) {
+        
+                    $constraint->aspectRatio();
+                })->save($destinationPath.'/'.$filenome);
+
                 $uploadSuccess = $image->move($destinationPath, $filenome);
 
                 $carphoto = new CarPhoto(); 
@@ -102,7 +124,7 @@ class CarroController extends Controller
                 $carphoto->save();
             }
         }
-
+        return redirect()->route('carros.index') ->with('successo','Adicionou um novo carro!');
     }
 
     /**
@@ -111,9 +133,12 @@ class CarroController extends Controller
      * @param  \App\Carro  $carro
      * @return \Illuminate\Http\Response
      */
-    public function show(Carro $carro)
+    public function show( $id)
     {
-        //
+        $carro = Carro::with('parque','modelo','categoria', 'acessorios','carphotos')->findOrFail($id);
+       // $carphotos = CarPhoto::with('carros')->findOrFail($id)->carros;
+        return view('catalogo.viatura')->with(compact('carro'));
+        
     }
 
     /**
