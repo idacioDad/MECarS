@@ -136,6 +136,7 @@ class CarroController extends Controller
     public function show( $id)
     {
         $carro = Carro::with('parque','modelo','categoria', 'acessorios','carphotos')->findOrFail($id);
+        
        // $carphotos = CarPhoto::with('carros')->findOrFail($id)->carros;
         return view('catalogo.viatura')->with(compact('carro'));
         

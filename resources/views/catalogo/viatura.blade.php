@@ -28,61 +28,46 @@
                                             <div class="light-slide-item">  
                                                 <div class="favorite-and-print"> 
                                                     <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
-                                                        <li data-thumb="{{asset('assets/img/one-car/1.jpg')}}"> 
-                                                            <img src="{{asset('assets/img/one-car/1.jpg')}}" alt="KwitaraCars" />
+                                                    <li data-thumb="{{asset ('images_upload/carros_Banner/'.$carro-> carro_foto) }}"> 
+                                                            <img src="{{asset ('images_upload/carros_Banner/'.$carro-> carro_foto) }}" alt="KwitaraCars" />
                                                         </li>
-                                                        <li data-thumb="{{asset('assets/img/one-car/4.jpg')}}"> 
-                                                            <img src="{{asset('assets/img/one-car/4.jpg')}}" alt="KwitaraCars" />
+                                                        @foreach($carro->carphotos as $carphoto)
+                                                        <li data-thumb="{{asset ('images_upload/carros/'.$carphoto->car_foto) }}"> 
+                                                            <img src="{{asset ('images_upload/carros/'.$carphoto->car_foto) }}" alt="KwitaraCars" />
                                                         </li>
-                                                        <li data-thumb="{{asset('assets/img/one-car/3.jpg')}}"> 
-                                                            <img src="{{asset('assets/img/one-car/3.jpg')}}" alt="KwitaraCars" />
-                                                        </li>  
-                                                        <li data-thumb="{{asset('assets/img/one-car/2.jpg')}}"> 
-                                                            <img src="{{asset('assets/img/one-car/2.jpg')}}" alt="KwitaraCars" />
-                                                        </li> 
-                                                        <li data-thumb="{{asset('assets/img/one-car/1.jpg')}}"> 
-                                                            <img src="{{asset('assets/img/one-car/1.jpg')}}" alt="KwitaraCars" />
-                                                        </li>
-                                                        <li data-thumb="{{asset('assets/img/one-car/2.jpg')}}"> 
-                                                            <img src="{{asset('assets/img/one-car/2.jpg')}}" alt="KwitaraCars" />
-                                                        </li>    
-                                                        <li data-thumb="{{asset('assets/img/one-car/3.jpg')}}"> 
-                                                            <img src="{{asset('assets/img/one-car/3.jpg')}}" alt="KwitaraCars" />
-                                                        </li>   
-                                                        <li data-thumb="{{asset('assets/img/one-car/4.jpg')}}"> 
-                                                            <img src="{{asset('assets/img/one-car/4.jpg')}}" alt="KwitaraCars" />
-                                                        </li>                                    
+                                                        @endforeach
+                                                       
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div> 
 
-                                        <h1>Price :  2000000$</h1>
+                                        <h1>Preço :  {{$carro->carro_preco}} MZN</h1>
 
                                         <div class="row">
                                             <div class="col-md-5">
                                                 <div class="vehicul-detail">
 
                                                     <div class="detail-field row" >
-                                                        <span class="col-xs-6 col-md-5 detail-field-label">Manufacturer</span>
-                                                        <span class="col-xs-6 col-md-7 detail-field-value"><a href="#" rel="tag">Ford</a></span>
-                                                        <span class="col-xs-6 col-md-5 detail-field-label">Model</span>
-                                                        <span class="col-xs-6 col-md-7 detail-field-value"><a href="#" rel="tag">Ford x8</a></span>
-                                                        <span class="col-xs-6 col-md-5 detail-field-label">Vehicle Type</span>
-                                                        <span class="col-xs-6 col-md-7 detail-field-value"><a href="#" rel="tag">City Cars</a></span>
-                                                        <span class="col-xs-6 col-md-5 detail-field-label">Color</span>
+                                                        <span class="col-xs-6 col-md-5 detail-field-label">Fabricante</span>
+                                                        <span class="col-xs-6 col-md-7 detail-field-value"><a href="#" rel="tag">{{$carro->modelo->fabricantes->fabricante_nome}}</a></span>
+                                                        <span class="col-xs-6 col-md-5 detail-field-label">Modelo</span>
+                                                        <span class="col-xs-6 col-md-7 detail-field-value"><a href="#" rel="tag">{{$carro->modelo->modelo_nome}}</a></span>
+                                                        <span class="col-xs-6 col-md-5 detail-field-label">Tipo de Veículo</span>
+                                                        <span class="col-xs-6 col-md-7 detail-field-value"><a href="#" rel="tag">{{$carro->categoria->categoria_nome}}</a></span>
+                                                        <span class="col-xs-6 col-md-5 detail-field-label">Cor do carro</span>
                                                         <span class="col-xs-6 col-md-7 detail-field-value">
-                                                            <span class="amount">Red</span> 
+                                                            <span class="amount">{{$carro->carro_corExterna}}</span> 
                                                         </span>
-                                                        <span class="col-xs-6 col-md-5 detail-field-label">Mileage</span>
-                                                        <span class="col-xs-6 col-md-7 detail-field-value">762 44 KM</span>
+                                                        <span class="col-xs-6 col-md-5 detail-field-label">Kilometragem</span>
+                                                        <span class="col-xs-6 col-md-7 detail-field-value">{{$carro->carro_Km}}</span>
                                                         
                                                         
-                                                        <span class="col-xs-6 col-md-5 detail-field-label">fuel</span>
-                                                        <span class="col-xs-6 col-md-7 detail-field-value">Diesel</span>
+                                                        <span class="col-xs-6 col-md-5 detail-field-label">Tipo de Combustivel</span>
+                                                        <span class="col-xs-6 col-md-7 detail-field-value">{{$carro->carro_combustivel}}</span>
                                                         
-                                                        <span class="col-xs-6 col-md-5 detail-field-label">Places</span>
-                                                        <span class="col-xs-6 col-md-7 detail-field-value">5</span>                                                        
+                                                        <span class="col-xs-6 col-md-5 detail-field-label">Lotação</span>
+                                                        <span class="col-xs-6 col-md-7 detail-field-value">{{$carro->carro_lotacao}}</span>                                                        
                                                     </div>
 
                                                 </div>
@@ -91,13 +76,16 @@
                                                 <p>Lorem ipsum dolor sit amet, ssa quis mauris sollicitudin commodo venenatis ligula commodo. Sed blandit convallis dignissim. Pellentesque pharetra velit eu velit elementum et convallis erat vulputate. Sed in nulla ut elit mporta nibh leo a massa. Sed quam nunc, vulputate vel imperdiet vel, aliquet sit amet risus. Maecenas nec tempus velit. Praesent gravida mi et mauris sollicitudin ultricies. Duis molestie quam sem, ac faucibus velit. Curabitur dolor dolor, fringilla vel fringilla tempor, ultricies sed tellus. </p>
                                             </div>
                                         </div>
+                                        <div class="col-md-12">
+                                        <div class="col-md-4"></div>
+                                        <br><div class="col-md-5"><a href="#" title="" class="flat-btn ">Adicionar ao carrinho</a></div></div>
 
-                                        <div class="vehicul-video">
+                                        <!--div class="vehicul-video">
                                             <div class="heading3">
                                                 <h2>vehicul Video </h2> 
                                             </div>
                                             <iframe height="400" src="https://www.youtube.com/embed/rlasf0cUfzU" allowfullscreen></iframe>
-                                        </div>
+                                        </div-->
 
                                         <div class="send-email-to-agent">
                                             <div class="comment-form">
@@ -145,10 +133,10 @@
                                 <div class="agent_bg_widget widget"> 
                                     <div class="agent_widget">
                                         <div class="agent_pic">
-                                            <a href="agent.html" title="">
-                                                <img src="img/demo/man1.jpg" alt="" />
+                                            <a href="#" title="">
+                                                <img src="{{asset ('images_upload/parques/'.$carro-> parque->parque_logo) }}" alt="" />
                                                 <h3 class="nocontent outline">--- document outline needed 3 ---</h3>
-                                                <h4>Smith forbes</h4> 
+                                                <h4>{{$carro->parque->parque_nome}}</h4> 
                                             </a>
                                         </div>   
                                         <div class="agent_social">
@@ -158,10 +146,10 @@
                                             <a href="#" title=""><i class="fa fa-tumblr"></i></a>
                                         </div>
                                         <span>
-                                            <i class="fa fa-phone"> </i> +1 9090909090 
+                                            <i class="fa fa-phone"> </i> {{$carro->parque->parque_contacto}} 
                                         </span>
                                         <span>
-                                            <i class="fa fa-envelope"> </i> agent@company.com
+                                            <i class="fa fa-envelope"> </i> {{$carro->parque->parque_email}}
                                         </span>
                                         <a href="agent.html"  title="" class="btn contact-agent">Find more</a>                                        
                                     </div>
