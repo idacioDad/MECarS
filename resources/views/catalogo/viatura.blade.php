@@ -78,14 +78,12 @@
                                         </div>
                                         <div class="col-md-12">
                                         <div class="col-md-4"></div>
-                                        <br><div class="col-md-5"><a href="#" title="" class="flat-btn ">Adicionar ao carrinho</a></div></div>
+                                        <form action="url('add-to-cart')"  method="POST" class="form-inline">
+                                            @csrf
+                                        <input type="hidden" name="carro_id" value="{{$carro->carro_id}}"/>
+                                        <br><div class="col-md-5"><button type="submit" class="flat-btn ">Adicionar ao carrinho</button></div></div>
 
-                                        <!--div class="vehicul-video">
-                                            <div class="heading3">
-                                                <h2>vehicul Video </h2> 
-                                            </div>
-                                            <iframe height="400" src="https://www.youtube.com/embed/rlasf0cUfzU" allowfullscreen></iframe>
-                                        </div-->
+                                        </form>
 
                                         <div class="send-email-to-agent">
                                             <div class="comment-form">

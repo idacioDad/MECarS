@@ -25,6 +25,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Creating a new route 
 Route::get('/catalogo', 'CarroController@catalogo');
 
+//add to cart controller
+Route::post('add-to-cart', 'CarroController@addtocart');
+
+
 Route::get('/catalogo/viatura/{carro}', 'CarroController@show');
 
 Route::get('/pages/faq', function() { 

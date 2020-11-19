@@ -74,7 +74,7 @@ class CarroController extends Controller
             $carro->carro_ano_fabrico=$request->get('carro_ano_fabrico');
             $carro->carro_Km=$request->get('carro_Km');
 
-            if($file = $request->hasFile('carro_foto')) {
+            if($request->hasFile('carro_foto')) {
             
                 $file = $request->file('carro_foto') ;
                 
@@ -102,7 +102,7 @@ class CarroController extends Controller
             $carro->save();
             $id_carro=$carro->carro_id;
 
-            if($images =$request->hasFile('car_foto')){
+            if($request->hasFile('car_foto')){
             $images = $request->file('car_foto'); // collection
 
             // loop over collection an store each image 
@@ -136,11 +136,15 @@ class CarroController extends Controller
     public function show( $id)
     {
         $carro = Carro::with('parque','modelo','categoria', 'acessorios','carphotos')->findOrFail($id);
-        
-       // $carphotos = CarPhoto::with('carros')->findOrFail($id)->carros;
         return view('catalogo.viatura')->with(compact('carro'));
         
     }
+
+/**
+ * Add product to cart
+ * 
+ */
+
 
     /**
      * Show the form for editing the specified resource.
