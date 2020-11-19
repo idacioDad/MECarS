@@ -37,4 +37,16 @@ class Carro extends Model
         return $this->hasMany('App\CarPhoto', 'id_carro','carro_id');
     }
 
+    function orders() {
+        return $this->hasMany('App\Order', 'id_carro','carro_id');
+    }
+
+    function carroorders() {
+        return $this->belongsToMany('App\Carro_Order', 'carro_orders','id_carro','id_order');
+    }
+
+    function carts() {
+        return $this->hasMany('App\Cart');
+    }
+
 }
