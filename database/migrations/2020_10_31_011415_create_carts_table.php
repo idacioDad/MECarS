@@ -20,6 +20,7 @@ class CreateCartsTable extends Migration
             $table->foreign('id_user')->references('id')->on('users');
             $table->unsignedBigInteger('id_carro');
             $table->foreign('id_carro')->references('carro_id')->on('carros');
+            $table->unsignedBigInteger('quantity');
             $table->timestamps();
         });
     }

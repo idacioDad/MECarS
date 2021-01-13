@@ -33,7 +33,7 @@
                                 @csrf
                                 
                                     <div class="field">
-                                         <input id="name" placeholder="Username" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                         <input id="name" placeholder="Username" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" >
 
                                         @error('name')
                                             <span class="invalid-feedback" role="alert">

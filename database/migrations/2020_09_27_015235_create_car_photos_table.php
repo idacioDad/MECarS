@@ -16,7 +16,7 @@ class CreateCarPhotosTable extends Migration
         Schema::create('car_photos', function (Blueprint $table) {
             $table->bigIncrements('carphoto_id');
             $table->unsignedBigInteger('id_carro');
-            $table->foreign('id_carro')->references('carro_id')->on('carros')->onDelete('cascade');;
+            $table->foreign('id_carro')->references('carro_id')->on('carros')->onDelete('cascade');
             $table->string('car_foto')->nullable();
             $table->timestamps();
         });

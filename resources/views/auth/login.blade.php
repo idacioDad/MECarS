@@ -41,7 +41,7 @@
                                     </div>
                                     <div class="field">
 
-                                            <input id="password" type="password" placeholder="Your Password"  class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                            <input id="password"  placeholder="Your Password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" autofocus>
 
                                             @error('password')
                                                 <span class="invalid-feedback" role="alert">

@@ -15,6 +15,23 @@
                 </div>
             </div>
         </div><!-- inner Head -->
+        @if(Session::has('error_message'))
+        <div class="alert alert-danger" role="alert">
+        {{Session::get('error_message')}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        @endif
+
+        @if(Session::has('messagem_sucesso'))
+        <div class="alert alert-sucess" role="alert" style="margin-top: 10px";>
+        {{Session::get('messagem_sucesso')}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        @endif
 
         <section class="block">
             <div class="container">
@@ -76,15 +93,19 @@
                                                 <p>Lorem ipsum dolor sit amet, ssa quis mauris sollicitudin commodo venenatis ligula commodo. Sed blandit convallis dignissim. Pellentesque pharetra velit eu velit elementum et convallis erat vulputate. Sed in nulla ut elit mporta nibh leo a massa. Sed quam nunc, vulputate vel imperdiet vel, aliquet sit amet risus. Maecenas nec tempus velit. Praesent gravida mi et mauris sollicitudin ultricies. Duis molestie quam sem, ac faucibus velit. Curabitur dolor dolor, fringilla vel fringilla tempor, ultricies sed tellus. </p>
                                             </div>
                                         </div>
-                                        <div class="col-md-12">
-                                        <div class="col-md-4"></div>
-                                        <form action="url('add-to-cart')"  method="POST" class="form-inline">
-                                            @csrf
-                                        <input type="hidden" name="carro_id" value="{{$carro->carro_id}}"/>
-                                        <br><div class="col-md-5"><button type="submit" class="flat-btn ">Adicionar ao carrinho</button></div></div>
+                                        <div class="row">
+                                        
+                                            <form action="{{ route('carrinho.store') }}"  method="POST" class="form-inline">
+                                                    @csrf
+                                                    <div class="col-md-5">
+                                                    <label for="example-number-input" class="col-3 col-form-label">Quantidade</label>
+                                                <input value="1" type="number" name="quantity" class="form-control col-md-5" />
+                                                <input type="hidden" name="carro_id" value="{{$carro->carro_id}}"/></div>
+                                                <div class="col-md-7"><button type="submit" class="flat-btn ">Adicionar ao carrinho</button></div>
+                                            
 
-                                        </form>
-
+                                            </form>
+                                     </div>
                                         <div class="send-email-to-agent">
                                             <div class="comment-form">
                                                 <div class="heading3">
@@ -153,97 +174,12 @@
                                     </div>
                                 </div><!-- Follow Widget -->
 
-                                <div class="search_widget widget">
-                                    <div class="heading2">
-                                        <h3>SEARCH VEHICULS</h3>
-                                    </div>
-                                    <div class="search-form"> 
-                                        <form action="vehiculs.html"  method="get" class="form-inline">   
-                                            <div class="search-form-content">
-                                                <div class="search-form-field">  
-                                                    <div class="form-group col-md-12">
-                                                        <div class="label-select">
-                                                            <select class="form-control" name="s_location">
-                                                                <option>Any Manufacturer</option>
-                                                                <option>Audi</option>
-                                                                <option>Mercedes-Benz</option>
-                                                                <option>BMW</option>
-                                                                <option>Lexus</option>
-                                                                <option>Lincoln</option>
-                                                                <option>Ford</option>
-                                                                <option>Fiat</option>
-                                                                <option>Dodge</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group col-md-12">
-                                                        <div class="label-select">  
-                                                            <select class="form-control" name="anymodule">
-                                                                <option>Any Model </option>
-                                                                <option value="1">R8</option>
-                                                                <option value="2">S500</option>
-                                                                <option value="3">540i</option>
-                                                                <option value="4">RX300</option>
-                                                                <option value="5">Navigator</option>
-                                                                <option value="6">Taurus</option>
-                                                                <option value="7">Doblo</option>
-                                                                <option value="8">Viper</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>  
-
-                                                    <div class="form-group col-md-12">
-                                                        <div class="label-select">
-                                                            <select class="form-control" name="s_location"> 
-                                                                <option>Any locations</option>
-                                                                <option>Central New York</option>
-                                                                <option>GreenVille</option>
-                                                                <option>Long Island</option>
-                                                                <option>New York City</option>
-                                                                <option>West Side</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="form-group col-md-12">
-                                                        <div class="label-select"> 
-                                                            <select class="form-control" name="s_statu">
-                                                                <option>Any Status </option>
-                                                                <option value="damaged">Damaged</option>
-                                                                <option value="new">New</option>
-                                                                <option value="semi-new">Semi-New</option>
-                                                                <option value="used">Used</option>
-                                                            </select>
-                                                        </div>
-                                                    </div> 
-
-                                                    <div class="form-group col-md-12">
-                                                        <span class="gprice-label">Price Range</span>
-                                                        <input type="text" class="span2" value="" data-slider-min="0" 
-                                                               data-slider-max="60000" data-slider-step="5" 
-                                                               data-slider-value="[0,60000]" id="price-range" >
-                                                    </div>
-                                                    <div class="form-group col-md-12">
-                                                        <span class="garea-label">Mileage Range</span> 
-                                                        <input type="text" class="span2" value="" data-slider-min="0" 
-                                                               data-slider-max="60000" data-slider-step="5" 
-                                                               data-slider-value="[50,60000]" id="vehicul-geo" >
-                                                    </div>                                            
-                                                </div> 
-                                            </div>
-                                            <div class="search-form-submit">
-                                                <button type="submit" class="btn-search">Search</button>
-                                            </div>
-                                        </form>
-                                    </div><!-- Services Sec -->
-                                </div><!-- Category Widget -->
                             </aside>
                         </div>
 
                         <div class="related-vehiculs-">
                             <div class="heading3">
-                                <h3>RELATED VEHICULS</h3>
+                                <h3>Carros Relacionados</h3>
                                 <span>Lorem ipsum dolor amet</span>
                             </div>
                             <div class="related">

@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -26,7 +27,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/catalogo', 'CarroController@catalogo');
 
 //add to cart controller
-Route::post('add-to-cart', 'CarroController@addtocart');
+Route::post('/catalogo/viatura/{carro}', 'CarroController@addtocart');
 
 
 Route::get('/catalogo/viatura/{carro}', 'CarroController@show');
@@ -80,6 +81,10 @@ Route::resource('admin/parques','ParqueController');
 
 //Trackers
 Route::resource('admin/trackers','TrackerController');
+
+
+//Carts
+Route::resource('/carrinho','CartController');
 
 
 
