@@ -7,9 +7,11 @@ use App\Parque;
 use App\Modelo;
 use App\Categoria;
 use App\CarPhoto;
+use App\Cart;
 use App\Acessorio;
 use Illuminate\Http\Request;
 use Image;
+use Session;
 
 class CarroController extends Controller
 {
@@ -140,11 +142,6 @@ class CarroController extends Controller
         
     }
 
-/**
- * Add product to cart
- * 
- */
-
 
     /**
      * Show the form for editing the specified resource.
@@ -181,4 +178,6 @@ class CarroController extends Controller
         $carro->delete();
         return redirect()->route('carros.index')->with('successo', 'Carro Removido!');
     }
+
+
 }
